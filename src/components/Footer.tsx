@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, ArrowRight } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 function IconLinkedIn() {
   return (
@@ -28,26 +28,6 @@ function IconFacebook() {
 export default function Footer() {
   return (
     <footer className="bg-foreground text-white mt-24">
-      {/* CTA band */}
-      <div className="border-b border-white/10">
-        <div className="container-site py-14 grid md:grid-cols-[1fr_auto] items-center gap-8">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-gold mb-2">Start here</p>
-            <h3 className="font-serif text-3xl text-white">
-              Take ten minutes. Find out where you stand.
-            </h3>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/diagnostic" className="btn-primary !bg-gold !text-foreground hover:!bg-gold-deep">
-              Start the diagnostic <ArrowRight size={18} />
-            </Link>
-            <Link href="/contact" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-foreground">
-              Schedule a consult
-            </Link>
-          </div>
-        </div>
-      </div>
-
       <div className="container-site py-16">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
