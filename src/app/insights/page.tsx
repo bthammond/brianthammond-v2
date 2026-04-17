@@ -2,7 +2,11 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { INSIGHTS } from "@/lib/insights";
 
-export const metadata = { title: "Insights" };
+export const metadata = {
+  title: "Insights — Family business strategy, succession, and growth",
+  description:
+    "Short, practical essays on running better family businesses — strategy, succession, governance, generational communication, and the work of the owner. New essays monthly.",
+};
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", {

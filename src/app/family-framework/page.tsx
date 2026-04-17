@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ArrowRight, Check, Lock } from "lucide-react";
 
-export const metadata = { title: "The FAMILY Framework" };
+export const metadata = {
+  title: "The FAMILY Framework",
+  description:
+    "Six pillars for family businesses that want to outlast the founder — Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. A proprietary system built from 30+ years inside family enterprises.",
+};
 
 // Public-facing: one line per pillar. The mechanics stay behind the paywall.
 const pillars = [

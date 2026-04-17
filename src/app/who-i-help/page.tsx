@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ArrowRight, Check, X } from "lucide-react";
 
-export const metadata = { title: "Who I help" };
+export const metadata = {
+  title: "Who I help — Second-generation family businesses",
+  description:
+    "Built for 2nd and 3rd-generation family businesses between $2M and $50M, five to ten years from a succession handoff. Also a smaller number of founder-led businesses serious about getting unstuck.",
+};
 
 export default function WhoIHelp() {
   return (

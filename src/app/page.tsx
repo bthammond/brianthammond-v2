@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import { ArrowRight, Check, Sparkles, Target, Users, Compass } from "lucide-react";
 
 const familyLetters = [
@@ -10,6 +11,43 @@ const familyLetters = [
   { letter: "L", word: "Leadership" },
   { letter: "Y", word: "Yield & Feedback" },
 ];
+
+const faqs = [
+  {
+    q: "What does a family business advisor do?",
+    a: "A family business advisor helps owners of multi-generational enterprises navigate the work that consulting, coaching, and therapy don\u2019t cover on their own: succession planning, governance, generational communication, and growth. I sit between the family and the business and help both sides have the conversations that move the company forward.",
+  },
+  {
+    q: "How is this different from hiring a business coach?",
+    a: "A coach works on you. An advisor works on the business alongside you. Family business advisory specifically addresses the structural and relational dynamics a generalist coach isn\u2019t equipped to handle \u2014 ownership transitions, shareholder agreements, next-gen readiness, family council structures, and the patterns only visible from the outside.",
+  },
+  {
+    q: "How much does working with you cost?",
+    a: "The flagship FAMILY Framework engagement is $1,964 per month with a 3-month minimum, backed by a 30-day money-back guarantee on month 1. A shorter 2\u20133 week Readiness Audit is $2,000 flat, and that fee credits in full toward month 1 if you engage the full Framework. Coaching and single-problem consults are scoped separately.",
+  },
+  {
+    q: "When should a family business start planning for succession?",
+    a: "Five to ten years before the handoff. Owners who start earlier give the next generation time to develop, give themselves time to let go, and give the business time to test-run the transition while both generations can still correct course. Most owners start too late.",
+  },
+  {
+    q: "Do you work with companies that aren\u2019t family-owned?",
+    a: "Yes \u2014 a smaller portion of my work is with founder-led businesses and solo entrepreneurs who want the same outside-eye pattern recognition. Most of my work is with 2nd and 3rd-generation family businesses between $2M and $50M in revenue, which is where the FAMILY Framework delivers the most value.",
+  },
+  {
+    q: "What is the FAMILY Framework?",
+    a: "A proprietary system built from 30+ years inside family enterprises, organized around six pillars: Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. Together they cover the work that sinks most family businesses \u2014 succession, governance, communication across generations, and growth. The methodology itself stays reserved for client engagements.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+};
 
 export default function Home() {
   return (
@@ -263,6 +301,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ — also fuels FAQPage rich snippets in Google */}
+      <section className="py-24 bg-surface border-y border-border">
+        <div className="container-site max-w-3xl">
+          <p className="eyebrow mb-4">Frequently asked</p>
+          <h2 className="font-serif mb-10">Questions I get every week.</h2>
+          <div className="divide-y divide-border">
+            {faqs.map(({ q, a }) => (
+              <details key={q} className="group py-5">
+                <summary className="cursor-pointer list-none flex justify-between items-start gap-4 font-serif text-xl hover:text-coral transition-colors">
+                  <span>{q}</span>
+                  <span className="text-coral text-2xl leading-none mt-1 transition-transform group-open:rotate-45 shrink-0">+</span>
+                </summary>
+                <p className="mt-3 text-ink-soft leading-relaxed">{a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* DIAGNOSTIC CTA */}
       <section className="py-24">
         <div className="container-site max-w-3xl text-center">
@@ -285,6 +342,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQPage structured data for rich results in Google */}
+      <Script
+        id="faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     </>
   );
 }

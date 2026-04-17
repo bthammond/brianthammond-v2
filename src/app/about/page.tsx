@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export const metadata = { title: "About" };
+export const metadata = {
+  title: "About Brian T. Hammond",
+  description:
+    "Thirty years advising owners across Fortune 500 boardrooms, scrappy startups, and family-owned businesses. Brian built the FAMILY Framework on pattern recognition earned the hard way — and runs his own multi-office family business too.",
+};
 
 export default function About() {
   return (

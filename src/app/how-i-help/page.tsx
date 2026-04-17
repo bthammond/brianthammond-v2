@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ArrowRight, Target, Users, Check, Sparkles, Compass, Shield } from "lucide-react";
 
-export const metadata = { title: "How I help" };
+export const metadata = {
+  title: "How I help — FAMILY Framework, Readiness Audit, Strategy, Coaching",
+  description:
+    "Four ways to work together: the flagship FAMILY Framework engagement ($1,964/mo, 30-day guarantee), a $2,000 Readiness Audit, targeted strategy & succession consults, and 1:1 coaching. Built for 2nd-generation family businesses.",
+};
 
 type Service = {
   id: string;
