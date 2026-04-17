@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { INSIGHTS } from "@/lib/insights";
 
 const BASE = "https://www.brianthammond.com";
 
-const routes = [
+const staticRoutes = [
   "",
   "/family-framework",
   "/diagnostic",
@@ -11,17 +12,24 @@ const routes = [
   "/about",
   "/insights",
   "/contact",
-  "/insights/why-most-strategic-plans-fail",
-  "/insights/the-annual-marketing-audit",
-  "/insights/three-questions-every-coaching-client",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return routes.map((path) => ({
+
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${BASE}${path}`,
     lastModified: now,
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path.startsWith("/insights/") ? 0.6 : 0.8,
+    priority: path === "" ? 1 : 0.8,
   }));
+
+  const insightEntries: MetadataRoute.Sitemap = INSIGHTS.map((post) => ({
+    url: `${BASE}/insights/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...insightEntries];
 }
