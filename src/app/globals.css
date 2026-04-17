@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  /* Editorial consulting palette: cool cream + deep ink + blue accent.
+     The tokens are still named "coral" / "cream" so existing class
+     references (text-coral, bg-cream, etc.) keep working. */
+  --background: #f0f3f8;
+  --surface: #ffffff;
+  --foreground: #0f1d2e;
+  --ink-soft: #324056;
+  --muted: #6b7684;
+  --border: #dde4ec;
+
+  --coral: #14396e;       /* primary accent — deep navy */
+  --coral-deep: #0a2440;  /* hover/deepest */
+  --gold: #c9a961;        /* secondary accent — muted gold */
+  --gold-deep: #a68a42;
+  --teal: #2a6f6f;
+  --teal-deep: #1f5555;
+  --cream: #f0f3f8;
+  --cream-deep: #e3e9f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--foreground);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-coral: var(--coral);
+  --color-coral-deep: var(--coral-deep);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+  h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
+  h3 { font-size: clamp(1.35rem, 2vw, 1.6rem); line-height: 1.25; }
+
+  p { color: var(--ink-soft); }
+
+  a { color: inherit; }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.6rem;
+  background: var(--coral);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  transition: background-color 200ms, transform 200ms;
+}
+.btn-primary:hover {
+  background: var(--coral-deep);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.6rem;
+  border: 2px solid var(--foreground);
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  transition: background-color 200ms, color 200ms;
+}
+.btn-outline:hover {
+  background: var(--foreground);
+  color: #ffffff;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--coral);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms, gap 200ms;
+}
+.link-arrow:hover {
+  border-color: var(--coral);
+  gap: 0.6rem;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+.container-site {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.underline-wavy {
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  background-position: 0 95%;
+  padding: 0 0.1em;
+}
+
