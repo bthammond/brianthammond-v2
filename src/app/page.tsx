@@ -111,14 +111,14 @@ export default function Home() {
 
           <div className="lg:col-span-7 grid sm:grid-cols-3 gap-4">
             {[
-              { n: "01", title: "Connect", body: "See the patterns you can&apos;t see from inside." },
+              { n: "01", title: "Connect", body: "See the patterns you can\u2019t see from inside." },
               { n: "02", title: "Build", body: "Put the systems in place your next chapter needs." },
-              { n: "03", title: "Grow", body: "Scale on a foundation that won&apos;t crack under weight." },
+              { n: "03", title: "Grow", body: "Scale on a foundation that won\u2019t crack under weight." },
             ].map(({ n, title, body }) => (
               <div key={n} className="p-6 border border-border rounded-2xl bg-surface">
                 <p className="font-serif text-2xl text-gold-deep mb-2">{n}</p>
                 <h3 className="font-serif text-lg mb-2">{title}</h3>
-                <p className="text-sm text-ink-soft" dangerouslySetInnerHTML={{ __html: body }} />
+                <p className="text-sm text-ink-soft">{body}</p>
               </div>
             ))}
           </div>
@@ -196,11 +196,11 @@ export default function Home() {
                   "Multi-generational — second or third generation at the helm",
                   "Owner is 5–10 years from handing off, or wondering when to start",
                   "The old systems still kind of work, but you can feel them straining",
-                  "Family and business dynamics are tangled and it&apos;s costing money",
+                  "Family and business dynamics are tangled and it\u2019s costing money",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <Check size={18} className="text-coral shrink-0 mt-1" />
-                    <span dangerouslySetInnerHTML={{ __html: item }} />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>

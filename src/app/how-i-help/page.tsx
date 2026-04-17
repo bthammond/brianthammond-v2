@@ -22,7 +22,7 @@ const services: Service[] = [
     icon: Sparkles,
     title: "FAMILY Framework Engagement",
     tagline: "The flagship. Multi-month, multi-pillar, built for family businesses that mean it.",
-    body: "A structured engagement across all six FAMILY pillars — Foundations, Alignment, Management, Innovation, Leadership, and Yield &amp; Feedback. You come out with the systems, governance, and succession plan the next chapter needs.",
+    body: "A structured engagement across all six FAMILY pillars — Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. You come out with the systems, governance, and succession plan the next chapter needs.",
     items: [
       "Six-pillar, multi-month engagement",
       "Family and business assessed together, not separately",
@@ -33,7 +33,7 @@ const services: Service[] = [
     price: "$1,964/month · 3-month minimum",
     footer: { label: "See the framework", href: "/family-framework" },
     primary: true,
-    highlight: "30-day money-back guarantee on month 1 — if you&apos;re not seeing clear value by day 30, I refund it. No questions.",
+    highlight: "30-day money-back guarantee on month 1 — if you\u2019re not seeing clear value by day 30, I refund it. No questions.",
   },
   {
     id: "readiness-audit",
@@ -56,7 +56,7 @@ const services: Service[] = [
     icon: Target,
     title: "Strategy & Succession Consults",
     tagline: "Targeted engagements on a specific problem you need solved now.",
-    body: "Shorter, sharper work when you know what&apos;s broken and need outside help fixing it. A stalled strategic plan, a messy governance structure, a succession conversation that keeps getting punted.",
+    body: "Shorter, sharper work when you know what\u2019s broken and need outside help fixing it. A stalled strategic plan, a messy governance structure, a succession conversation that keeps getting punted.",
     items: [
       "Strategic planning workshops",
       "Succession roadmap & readiness reviews",
@@ -114,7 +114,7 @@ export default function HowIHelp() {
               </div>
               {primary && <p className="eyebrow mb-3">Flagship engagement</p>}
               <h2 className="font-serif mb-4">{title}</h2>
-              <p className="text-xl text-ink-soft" dangerouslySetInnerHTML={{ __html: tagline }} />
+              <p className="text-xl text-ink-soft">{tagline}</p>
               {price && (
                 <p className="mt-4 font-serif text-2xl text-foreground">{price}</p>
               )}
@@ -125,7 +125,7 @@ export default function HowIHelp() {
               )}
             </div>
             <div className="lg:col-span-7">
-              <p className="text-lg mb-8" dangerouslySetInnerHTML={{ __html: body }} />
+              <p className="text-lg mb-8">{body}</p>
               <ul className="space-y-3">
                 {items.map((item) => (
                   <li key={item} className="flex gap-3">
@@ -137,7 +137,7 @@ export default function HowIHelp() {
               {highlight && (
                 <div className="mt-8 flex gap-3 p-5 border border-gold rounded-xl bg-cream-deep">
                   <Shield size={22} className="text-gold-deep shrink-0 mt-1" />
-                  <p className="text-ink-soft" dangerouslySetInnerHTML={{ __html: highlight }} />
+                  <p className="text-ink-soft">{highlight}</p>
                 </div>
               )}
             </div>

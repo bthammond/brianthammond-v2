@@ -9,12 +9,12 @@ const pillars = [
   { letter: "A", word: "Alignment", promise: "Build the communication channels that keep generations in step." },
   { letter: "M", word: "Management", promise: "Put governance and metrics in place that survive the transition." },
   { letter: "I", word: "Innovation", promise: "Evolve the business without breaking what made it work." },
-  { letter: "L", word: "Leadership", promise: "Prepare the next generation so the handoff doesn&apos;t fumble." },
+  { letter: "L", word: "Leadership", promise: "Prepare the next generation so the handoff doesn\u2019t fumble." },
   { letter: "Y", word: "Yield & Feedback", promise: "Install the feedback loops that keep the plan honest." },
 ];
 
 const phases = [
-  { n: "01", title: "Discover", body: "We map the family, the business, and the tensions nobody&apos;s naming." },
+  { n: "01", title: "Discover", body: "We map the family, the business, and the tensions nobody\u2019s naming." },
   { n: "02", title: "Align", body: "We build shared language and goals the whole system can stand behind." },
   { n: "03", title: "Build", body: "We put the structures, governance, and plans in place." },
   { n: "04", title: "Sustain", body: "We install the feedback loops so the work holds, year over year." },
@@ -81,7 +81,7 @@ export default function FamilyFramework() {
             {pillars.map(({ letter, word, promise }) => (
               <div key={letter} className="flex gap-4">
                 <span className="font-serif text-3xl text-gold-deep leading-none shrink-0 w-8">{letter}</span>
-                <p dangerouslySetInnerHTML={{ __html: `<strong class="text-foreground">${word}.</strong> ${promise}` }} />
+                <p><strong className="text-foreground">{word}.</strong> {promise}</p>
               </div>
             ))}
           </div>
@@ -132,7 +132,7 @@ export default function FamilyFramework() {
               <div key={n} className="p-8 bg-background border border-border rounded-2xl">
                 <p className="font-serif text-3xl text-gold-deep mb-2">{n}</p>
                 <h3 className="font-serif mb-3">{title}</h3>
-                <p dangerouslySetInnerHTML={{ __html: body }} />
+                <p>{body}</p>
               </div>
             ))}
           </div>

@@ -40,11 +40,11 @@ export default function WhoIHelp() {
                     "Second or third generation at the helm",
                     "Owner is 5–10 years from a handoff",
                     "Family and business are tangled in ways costing money",
-                    "You&apos;ve hit a ceiling the old systems can&apos;t carry you through",
+                    "You\u2019ve hit a ceiling the old systems can\u2019t carry you through",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <Check size={18} className="text-coral shrink-0 mt-1" />
-                      <span dangerouslySetInnerHTML={{ __html: item }} />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -55,9 +55,9 @@ export default function WhoIHelp() {
                   {[
                     "The succession conversation keeps getting punted",
                     "Family meetings feel like they orbit the real issues",
-                    "The next generation isn&apos;t where you hoped by now",
-                    "You&apos;re carrying too much of the business in your head",
-                    "Something&apos;s off — you can&apos;t name it — but you can feel it",
+                    "The next generation isn\u2019t where you hoped by now",
+                    "You\u2019re carrying too much of the business in your head",
+                    "Something\u2019s off — you can\u2019t name it — but you can feel it",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <Check size={18} className="text-gold-deep shrink-0 mt-1" />
@@ -110,14 +110,14 @@ export default function WhoIHelp() {
           </p>
           <ul className="space-y-3">
             {[
-              "You&apos;re looking for a cheerleader who&apos;ll confirm what you already believe",
-              "You want a done-for-you agency — I&apos;m an advisor, not an operator",
-              "You&apos;re pre-revenue and need product-market fit help",
-              "You&apos;re uninterested in honest conversations when they&apos;re hard",
+              "You\u2019re looking for a cheerleader who\u2019ll confirm what you already believe",
+              "You want a done-for-you agency — I\u2019m an advisor, not an operator",
+              "You\u2019re pre-revenue and need product-market fit help",
+              "You\u2019re uninterested in honest conversations when they\u2019re hard",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <X size={18} className="text-muted shrink-0 mt-1" />
-                <span className="text-ink-soft" dangerouslySetInnerHTML={{ __html: item }} />
+                <span className="text-ink-soft">{item}</span>
               </li>
             ))}
           </ul>
