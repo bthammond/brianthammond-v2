@@ -1,15 +1,28 @@
 import Link from "next/link";
-import { ArrowRight, Target, Users, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Target, Users, Check, Sparkles, Compass, Shield } from "lucide-react";
 
 export const metadata = { title: "How I help" };
 
-const services = [
+type Service = {
+  id: string;
+  icon: typeof Sparkles;
+  title: string;
+  tagline: string;
+  body: string;
+  items: string[];
+  price?: string;
+  footer?: { label: string; href: string };
+  primary?: boolean;
+  highlight?: string;
+};
+
+const services: Service[] = [
   {
     id: "family-framework",
     icon: Sparkles,
     title: "FAMILY Framework Engagement",
     tagline: "The flagship. Multi-month, multi-pillar, built for family businesses that mean it.",
-    body: "A structured engagement across all six FAMILY pillars — Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. You come out with the systems, governance, and succession plan the next chapter needs.",
+    body: "A structured engagement across all six FAMILY pillars — Foundations, Alignment, Management, Innovation, Leadership, and Yield &amp; Feedback. You come out with the systems, governance, and succession plan the next chapter needs.",
     items: [
       "Six-pillar, multi-month engagement",
       "Family and business assessed together, not separately",
@@ -17,8 +30,26 @@ const services = [
       "Systems designed to outlast the founder",
       "Best for: $2M–$50M family businesses 5–10 years from transition",
     ],
+    price: "$1,964/month · 3-month minimum",
     footer: { label: "See the framework", href: "/family-framework" },
     primary: true,
+    highlight: "30-day money-back guarantee on month 1 — if you&apos;re not seeing clear value by day 30, I refund it. No questions.",
+  },
+  {
+    id: "readiness-audit",
+    icon: Compass,
+    title: "The Readiness Audit",
+    tagline: "A paid deep-dive. Not ready for a 90-day engagement? Start here.",
+    body: "A 2- to 3-week paid discovery built for owners who want to work with me before committing to the full Framework. We do structured interviews with you and key family members, assess where you stand across the six pillars, and deliver a written report with a clear read on the work ahead.",
+    items: [
+      "Two to three weeks, start to finish",
+      "Two interview sessions with owner + key family members",
+      "Written assessment across all six FAMILY pillars",
+      "90-minute debrief session with action priorities",
+      "100% of the fee credits toward month 1 if you engage the full Framework",
+    ],
+    price: "$2,000 flat",
+    highlight: "Fee credits in full toward the FAMILY Framework engagement — so if you go from Audit to Framework, month 1 is essentially covered.",
   },
   {
     id: "strategy",
@@ -33,6 +64,7 @@ const services = [
       "Board & family council facilitation",
       "Best for: owners with a specific problem to solve",
     ],
+    price: "Scoped to the problem",
   },
   {
     id: "coaching",
@@ -47,6 +79,7 @@ const services = [
       "Decision-making frameworks",
       "Best for: owners wanting an ongoing outside voice",
     ],
+    price: "Monthly retainer",
   },
 ];
 
@@ -57,17 +90,18 @@ export default function HowIHelp() {
         <div className="container-site max-w-3xl">
           <p className="eyebrow mb-4">How I help</p>
           <h1 className="font-serif mb-6">
-            Three ways in. One goal: connect the dots and build the systems to grow.
+            Four ways to work together. One goal: connect the dots and build the systems to grow.
           </h1>
           <p className="text-xl">
-            Most clients start with the FAMILY Framework. Some come to me for a
-            single-problem consult. Others want ongoing coaching. All three share
-            the same arc — see clearly, build right, grow durably.
+            Most clients start with the FAMILY Framework. Some test the waters with the
+            Readiness Audit first. Others come to me for a single-problem consult, or
+            ongoing coaching. All four share the same arc — see clearly, build right,
+            grow durably.
           </p>
         </div>
       </section>
 
-      {services.map(({ id, icon: Icon, title, tagline, body, items, footer, primary }) => (
+      {services.map(({ id, icon: Icon, title, tagline, body, items, price, footer, primary, highlight }) => (
         <section
           key={id}
           id={id}
@@ -81,6 +115,9 @@ export default function HowIHelp() {
               {primary && <p className="eyebrow mb-3">Flagship engagement</p>}
               <h2 className="font-serif mb-4">{title}</h2>
               <p className="text-xl text-ink-soft" dangerouslySetInnerHTML={{ __html: tagline }} />
+              {price && (
+                <p className="mt-4 font-serif text-2xl text-foreground">{price}</p>
+              )}
               {footer && (
                 <Link href={footer.href} className="link-arrow mt-6 inline-flex">
                   {footer.label} <ArrowRight size={16} />
@@ -97,6 +134,12 @@ export default function HowIHelp() {
                   </li>
                 ))}
               </ul>
+              {highlight && (
+                <div className="mt-8 flex gap-3 p-5 border border-gold rounded-xl bg-cream-deep">
+                  <Shield size={22} className="text-gold-deep shrink-0 mt-1" />
+                  <p className="text-ink-soft" dangerouslySetInnerHTML={{ __html: highlight }} />
+                </div>
+              )}
             </div>
           </div>
         </section>

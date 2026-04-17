@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Check, Sparkles, Target, Users } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Target, Users, Compass } from "lucide-react";
 
 const familyLetters = [
   { letter: "F", word: "Foundations" },
@@ -214,16 +214,22 @@ export default function Home() {
         <div className="container-site">
           <div className="max-w-2xl mb-12">
             <p className="eyebrow mb-4">How I help</p>
-            <h2 className="font-serif">Three ways to work together.</h2>
+            <h2 className="font-serif">Four ways to work together.</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Sparkles,
                 title: "FAMILY Framework",
-                body: "Deep, multi-month engagement across all six pillars. The flagship for family businesses serious about the next chapter.",
+                body: "Deep, multi-month engagement across all six pillars. The flagship. 30-day money-back guarantee on month 1.",
                 href: "/how-i-help#family-framework",
+              },
+              {
+                icon: Compass,
+                title: "Readiness Audit",
+                body: "A paid 2–3 week deep-dive. Test the fit before committing. $2,000 credits in full toward month 1 of the Framework.",
+                href: "/how-i-help#readiness-audit",
               },
               {
                 icon: Target,

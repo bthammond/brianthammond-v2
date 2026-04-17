@@ -278,26 +278,56 @@ function ResultsScreen({ answers, onRetake }: { answers: Answers; onRetake: () =
         </div>
       </section>
 
-      {/* NEXT STEPS */}
+      {/* NEXT STEPS — two paths */}
       <section className="py-20 bg-surface border-y border-border">
-        <div className="container-site max-w-3xl">
-          <p className="eyebrow mb-4">What&apos;s next</p>
-          <h2 className="font-serif mb-6">Now let&apos;s talk about what to do with this.</h2>
-          <p className="text-lg mb-8">
-            A 30-minute consult is free. Bring your results, we&apos;ll talk through
-            what&apos;s behind the numbers, and you&apos;ll leave with a clear read on
-            whether the FAMILY Framework — or some other shape of engagement — is the
-            right next step.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href={`/contact?score=${overall}&weak=${weakest.map((w) => w.pillar).join(",")}`}
-              className="btn-primary"
-            >
-              Schedule a free consult <ArrowRight size={18} />
-            </Link>
-            <button onClick={onRetake} className="btn-outline">
-              Retake the diagnostic
+        <div className="container-site max-w-5xl">
+          <div className="max-w-3xl mb-10">
+            <p className="eyebrow mb-4">What&apos;s next</p>
+            <h2 className="font-serif mb-6">Two ways to go from here.</h2>
+            <p className="text-lg">
+              Your results are a starting point, not a verdict. Here are the two ways
+              most people use them — pick whichever feels right.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Path A — free consult */}
+            <div className="p-8 border border-border rounded-2xl bg-background flex flex-col">
+              <p className="eyebrow mb-3">Path A · Free</p>
+              <h3 className="font-serif mb-4">Schedule a 30-minute consult</h3>
+              <p className="mb-6 text-ink-soft flex-1">
+                We get on a call. You tell me what&apos;s behind these numbers,
+                I&apos;ll share what I&apos;m seeing, and you&apos;ll leave with a
+                clear read on what to do next — whether that&apos;s the FAMILY
+                Framework, something else, or nothing at all.
+              </p>
+              <Link
+                href={`/contact?score=${overall}&weak=${weakest.map((w) => w.pillar).join(",")}`}
+                className="btn-primary w-full sm:w-auto"
+              >
+                Schedule the consult <ArrowRight size={18} />
+              </Link>
+            </div>
+
+            {/* Path B — paid audit */}
+            <div className="p-8 border-2 border-gold rounded-2xl bg-cream-deep flex flex-col">
+              <p className="eyebrow mb-3">Path B · $2,000</p>
+              <h3 className="font-serif mb-4">The Readiness Audit</h3>
+              <p className="mb-6 text-ink-soft flex-1">
+                A 2- to 3-week paid deep-dive. Interviews with you and key family
+                members, a written assessment, and a 90-minute debrief. If you engage
+                the full FAMILY Framework after, <strong>the $2,000 credits in full
+                toward month 1.</strong>
+              </p>
+              <Link href="/how-i-help#readiness-audit" className="btn-outline w-full sm:w-auto">
+                Learn about the Audit <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <button onClick={onRetake} className="text-sm text-muted hover:text-coral inline-flex items-center gap-2">
+              <ArrowLeft size={14} /> Retake the diagnostic
             </button>
           </div>
         </div>
