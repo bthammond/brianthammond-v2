@@ -81,7 +81,7 @@ export default function Home() {
               <div className="aspect-[4/5] bg-coral/10 rounded-3xl overflow-hidden border border-border">
                 <Image
                   src="/Hammond-Headshot.jpg"
-                  alt="Brian T. Hammond"
+                  alt="Brian T. Hammond, family business advisor and entrepreneur mentor"
                   width={600}
                   height={750}
                   priority
@@ -201,6 +201,74 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* WHY ME — real social proof, no fake testimonials */}
+      <section className="py-24">
+        <div className="container-site">
+          <div className="max-w-3xl mb-14">
+            <p className="eyebrow mb-4">Why work with me</p>
+            <h2 className="font-serif mb-6">
+              Four things most advisors in this space can&apos;t say.
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                stat: "30+",
+                label: "Years advising owners",
+                body: "Three decades across Fortune 500 boardrooms, startups, and family-owned businesses. Pattern recognition earned the hard way.",
+              },
+              {
+                stat: "I live it",
+                label: "Practitioner, not theorist",
+                body: "I own and operate my own multi-office family business. When I talk about succession, I\u2019m reporting from the same seat you\u2019re sitting in.",
+              },
+              {
+                stat: "6",
+                label: "Pillars, one system",
+                body: "The proprietary FAMILY Framework covers what consulting, coaching, and therapy don\u2019t handle together — all six pillars, one integrated engagement.",
+              },
+              {
+                stat: "30 days",
+                label: "Money-back guarantee",
+                body: "Engage the Framework with zero risk on month 1. If the work isn\u2019t delivering clear value by day 30, I refund it. No questions.",
+              },
+            ].map(({ stat, label, body }) => (
+              <div key={label} className="p-8 border border-border rounded-2xl bg-surface">
+                <p className="font-serif text-5xl text-coral leading-none mb-2">{stat}</p>
+                <p className="eyebrow mb-4">{label}</p>
+                <p className="text-ink-soft">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS — reserved space. Swap in real client quotes when you collect them.
+          Intentionally left OUT of the rendered site until real content exists.
+          When ready, uncomment the JSX below AND update the `testimonials` array with
+          actual client quotes. Keep attributions truthful (role + industry). */}
+      {/*
+      <section className="py-20 bg-foreground text-white">
+        <div className="container-site max-w-5xl">
+          <p className="eyebrow text-gold mb-4">What clients say</p>
+          <h2 className="font-serif mb-12 text-white">Voices from the work.</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {testimonials.map(({ quote, name, role }) => (
+              <blockquote key={name} className="p-8 border border-white/10 rounded-2xl">
+                <p className="font-serif text-xl leading-snug text-white mb-6">
+                  &ldquo;{quote}&rdquo;
+                </p>
+                <footer className="text-white/70 text-sm">
+                  <strong className="text-white">{name}</strong> — {role}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+      */}
 
       {/* WHO I HELP — sharp ICP */}
       <section className="py-24">
