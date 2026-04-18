@@ -62,8 +62,9 @@ export default function DesignMethodPage() {
             every priority, every hard decision — during the program and for
             the rest of your career as an owner.
           </p>
-          <p className="text-lg text-ink-soft">
-            <strong>FAMILY is what we build.</strong> DESIGN is how we build it.
+          <p className="font-serif text-2xl mb-2">FAMILY by <span className="text-coral">DESIGN</span>.</p>
+          <p className="text-sm text-ink-soft">
+            FAMILY is what we build. DESIGN is how we build it.
           </p>
         </div>
       </section>

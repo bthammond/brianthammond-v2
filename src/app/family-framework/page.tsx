@@ -65,8 +65,9 @@ export default function FamilyFramework() {
             enterprises, founders, and established mid-market companies. Six domains,
             addressed across the full arc of an engagement.
           </p>
-          <p className="text-lg text-ink-soft mb-8">
-            <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
+          <p className="font-serif text-2xl mb-2">FAMILY by <span className="text-coral">DESIGN</span>.</p>
+          <p className="text-sm text-ink-soft mb-8">
+            FAMILY is what we build. The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/architecture" className="btn-primary">

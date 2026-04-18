@@ -65,9 +65,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-sm text-white/60">
-          <p>&copy; {new Date().getFullYear()} Brian T. Hammond. All rights reserved.</p>
-          <p>MBA, LSU &middot; 30+ years advising family businesses and entrepreneurs.</p>
+        <div className="mt-12 pt-6 border-t border-white/10">
+          <p className="font-serif text-xl text-white text-center mb-6">
+            FAMILY by <span className="text-gold">DESIGN</span>.
+          </p>
+          <div className="flex flex-col md:flex-row justify-between gap-3 text-sm text-white/60">
+            <p>&copy; {new Date().getFullYear()} Brian T. Hammond. All rights reserved.</p>
+            <p>MBA, LSU &middot; 30+ years advising family businesses and entrepreneurs.</p>
+          </div>
         </div>
       </div>
     </footer>

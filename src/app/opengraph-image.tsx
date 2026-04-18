@@ -46,26 +46,38 @@ export default async function OgImage() {
           style={{
             display: "flex",
             flexDirection: "column",
-            fontSize: "72px",
-            fontWeight: 700,
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            color: "#ffffff",
+            gap: "20px",
           }}
         >
-          <span>Connect the dots.</span>
-          <span style={{ display: "flex", alignItems: "baseline", gap: "0.3em" }}>
-            <span>Build the</span>
-            <span
-              style={{
-                backgroundImage: "linear-gradient(transparent 65%, #c9a961 65%, #c9a961 92%, transparent 92%)",
-              }}
-            >
-              systems
-            </span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "baseline",
+              gap: "0.25em",
+              fontSize: "124px",
+              fontWeight: 700,
+              lineHeight: 1,
+              letterSpacing: "-0.02em",
+              color: "#ffffff",
+            }}
+          >
+            <span>FAMILY</span>
+            <span style={{ color: "rgba(255,255,255,0.7)", fontWeight: 400, fontStyle: "italic", fontSize: "96px" }}>by</span>
+            <span style={{ color: "#c9a961" }}>DESIGN</span>
             <span>.</span>
-          </span>
-          <span>Grow.</span>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: "22px",
+              color: "rgba(255,255,255,0.75)",
+              fontFamily: "system-ui, sans-serif",
+              maxWidth: "900px",
+              lineHeight: 1.4,
+            }}
+          >
+            FAMILY is what we build. The DESIGN Method is how we build it.
+          </div>
         </div>
 
         {/* Bottom — name + URL */}
