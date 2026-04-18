@@ -2,20 +2,29 @@
 
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { Send, Check, TrendingUp } from "lucide-react";
+import { Send, Check, TrendingUp, ClipboardCheck } from "lucide-react";
 import { PILLAR_META, type Pillar } from "@/lib/diagnostic";
 
 const INTERESTS = [
-  "FAMILY Framework engagement",
-  "Family business consulting",
-  "Strategy & planning",
-  "Marketing & growth",
-  "Coaching & mentorship",
-  "Succession planning",
+  "The FAMILY Framework Architecture",
+  "Discovery conversation",
+  "Consulting & Coaching",
+  "Family Enterprise advisory",
+  "Entrepreneur Strategy",
+  "Financial Analysis",
   "Not sure yet",
 ];
 
 const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+
+type ReadinessBand = "strong" | "likely" | "notyet" | "different";
+
+const BAND_LABEL: Record<ReadinessBand, string> = {
+  strong: "Strong Fit",
+  likely: "Likely Fit",
+  notyet: "Not Yet",
+  different: "Different Program Needed",
+};
 
 function parsePillars(raw: string | null): Pillar[] {
   if (!raw) return [];
@@ -25,31 +34,57 @@ function parsePillars(raw: string | null): Pillar[] {
     .filter((s): s is Pillar => ["F", "A", "M", "I", "L", "Y"].includes(s));
 }
 
+function parseBand(raw: string | null): ReadinessBand | null {
+  if (!raw) return null;
+  const v = raw.toLowerCase();
+  if (v === "strong" || v === "likely" || v === "notyet" || v === "different") return v;
+  return null;
+}
+
 export default function LeadForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string>("");
 
   const params = useSearchParams();
+  const source = params.get("source"); // "diagnostic" | "readiness" | null
   const score = params.get("score");
   const weak = parsePillars(params.get("weak"));
+  const band = parseBand(params.get("band"));
 
-  const fromDiagnostic = score !== null || weak.length > 0;
+  const fromDiagnostic = source === "diagnostic" || (source == null && (score !== null || weak.length > 0));
+  const fromReadiness = source === "readiness" || band !== null;
 
   const defaultMessage = useMemo(() => {
-    if (!fromDiagnostic) return "";
-    const weakNames = weak.map((p) => PILLAR_META[p].name).join(" and ");
-    const lines = [
-      "Coming from the diagnostic:",
-      score ? `• Overall score: ${score}%` : null,
-      weakNames ? `• Weakest pillar${weak.length > 1 ? "s" : ""}: ${weakNames}` : null,
-      "",
-      "What I'd like to talk through:",
-      "",
-    ].filter(Boolean);
-    return lines.join("\n");
-  }, [fromDiagnostic, score, weak]);
+    if (fromReadiness && band) {
+      const lines = [
+        "Coming from the Readiness Assessment:",
+        `• Band: ${BAND_LABEL[band]}`,
+        "",
+        "What I'd like to talk through:",
+        "",
+      ];
+      return lines.join("\n");
+    }
+    if (fromDiagnostic) {
+      const weakNames = weak.map((p) => PILLAR_META[p].name).join(" and ");
+      const lines = [
+        "Coming from the FAMILY diagnostic:",
+        score ? `• Overall score: ${score}%` : null,
+        weakNames ? `• Weakest pillar${weak.length > 1 ? "s" : ""}: ${weakNames}` : null,
+        "",
+        "What I'd like to talk through:",
+        "",
+      ].filter(Boolean);
+      return lines.join("\n");
+    }
+    return "";
+  }, [fromDiagnostic, fromReadiness, score, weak, band]);
 
-  const defaultInterest = fromDiagnostic ? "FAMILY Framework engagement" : "";
+  const defaultInterest = useMemo(() => {
+    if (fromReadiness) return "The FAMILY Framework Architecture";
+    if (fromDiagnostic) return "Discovery conversation";
+    return "";
+  }, [fromDiagnostic, fromReadiness]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -57,8 +92,6 @@ export default function LeadForm() {
     setStatus("loading");
 
     if (!FORMSPREE_ENDPOINT) {
-      // Dev-mode fallback: simulate success so the form is usable before the
-      // endpoint is configured.
       setTimeout(() => setStatus("success"), 600);
       return;
     }
@@ -92,7 +125,7 @@ export default function LeadForm() {
         </h3>
         <p className="mt-2 text-ink-soft">
           I&apos;ll reach out within one business day to schedule your
-          confidential 30-minute consultation.
+          confidential 45-minute discovery conversation.
         </p>
       </div>
     );
@@ -103,12 +136,30 @@ export default function LeadForm() {
       onSubmit={onSubmit}
       className="rounded-2xl border border-border bg-surface p-8 md:p-10 shadow-sm"
     >
-      {fromDiagnostic && (
+      {fromReadiness && band && (
+        <div className="mb-8 flex gap-4 p-5 bg-cream-deep border border-coral rounded-xl">
+          <ClipboardCheck className="shrink-0 mt-1 text-coral" size={22} />
+          <div>
+            <p className="font-serif text-lg leading-snug mb-1">
+              Your Readiness Assessment results are attached.
+            </p>
+            <p className="text-sm text-ink-soft">
+              Band: <strong>{BAND_LABEL[band]}</strong>.{" "}
+              {band === "strong" && "The program is designed for owners in your position. Let's get the discovery conversation scheduled."}
+              {band === "likely" && "You're close. Let's talk through the specific gaps in the discovery conversation."}
+              {band === "notyet" && "We'll talk through what needs to change before the program lands for you."}
+              {band === "different" && "I'll respond with a pointer to a better-fitting next step."}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {fromDiagnostic && !fromReadiness && (
         <div className="mb-8 flex gap-4 p-5 bg-cream-deep border border-gold rounded-xl">
           <TrendingUp className="shrink-0 mt-1 text-gold-deep" size={22} />
           <div>
             <p className="font-serif text-lg leading-snug mb-1">
-              Your diagnostic results are attached.
+              Your FAMILY diagnostic results are attached.
             </p>
             <p className="text-sm text-ink-soft">
               {score && <>Overall: <strong>{score}%</strong>. </>}
@@ -157,19 +208,25 @@ export default function LeadForm() {
         <textarea
           id="message"
           name="message"
-          rows={fromDiagnostic ? 8 : 5}
+          rows={fromDiagnostic || fromReadiness ? 8 : 5}
           defaultValue={defaultMessage}
           className="w-full rounded-md border border-border bg-background px-4 py-3 text-sm focus:border-coral focus:outline-none focus:ring-2 focus:ring-coral/30 transition font-mono"
           placeholder={
-            fromDiagnostic
+            fromDiagnostic || fromReadiness
               ? undefined
               : "What challenges are you facing? What outcomes matter most?"
           }
         />
       </div>
 
-      {/* Hidden fields so the diagnostic context submits with the form */}
-      {fromDiagnostic && (
+      {/* Hidden fields so the source context submits with the form */}
+      {fromReadiness && band && (
+        <>
+          <input type="hidden" name="readiness_band" value={BAND_LABEL[band]} />
+          <input type="hidden" name="source" value="readiness" />
+        </>
+      )}
+      {fromDiagnostic && !fromReadiness && (
         <>
           <input type="hidden" name="diagnostic_score" value={score ?? ""} />
           <input type="hidden" name="diagnostic_weak_pillars" value={weak.join(",")} />

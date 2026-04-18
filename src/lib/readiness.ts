@@ -118,7 +118,7 @@ export function readinessBand(total: number): Band {
       title: "Not the right time",
       tone: "notyet",
       summary:
-        "The program will not yet land for you. The most common reasons: bandwidth, partner alignment, or financial position. Address those first; revisit in 6\u201312 months.",
+        "The program will not yet land for you. The most common reasons: bandwidth, partner alignment, or financial position. Address those first; revisit in 6–12 months.",
       nextStep:
         "Take the free 10-minute business diagnostic instead. It’ll give you a read on where your business stands today — useful signal to act on in the meantime.",
       ctaLabel: "Take the free diagnostic",

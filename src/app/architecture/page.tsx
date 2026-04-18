@@ -142,7 +142,7 @@ const milestones = [
     items: [
       "Integrator (general manager / COO) selected, trained, and in seat",
       "Owner out of daily operations; CEO operating rhythm in place",
-      "Owner’s calendar reduced by 30\u201350% of operational time",
+      "Owner’s calendar reduced by 30–50% of operational time",
     ],
   },
   {
@@ -257,6 +257,28 @@ export default function ArchitecturePage() {
                 <p className="text-ink-soft">{body}</p>
               </div>
             ))}
+          </div>
+
+          {/* Investment */}
+          <div className="mt-12 p-10 border-2 border-gold rounded-2xl bg-cream-deep">
+            <div className="grid md:grid-cols-[auto_1fr] gap-8 items-center">
+              <div className="text-center">
+                <p className="eyebrow mb-2">Investment</p>
+                <p className="font-serif text-5xl text-coral leading-none">$1,964</p>
+                <p className="mt-2 text-sm text-ink-soft">per month · 27 months</p>
+              </div>
+              <div>
+                <p className="text-lg">
+                  A committed two-year program with weekly consulting, bound
+                  companion books, and the 21-tab Excel working system. Total
+                  program investment is scoped in the discovery conversation
+                  based on business size and complexity. The{" "}
+                  <Link href="/readiness" className="link-arrow inline-flex">Readiness Assessment</Link>{" "}
+                  tells you in fifteen minutes whether the program fits your
+                  situation — before any pricing conversation.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

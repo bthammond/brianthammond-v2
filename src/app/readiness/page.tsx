@@ -253,21 +253,21 @@ function ResultsScreen({
           <div className="space-y-4">
             {[
               {
-                range: "65\u201375",
+                range: "65–75",
                 name: "Strong Fit",
                 body: "You’re ready. Schedule a discovery conversation.",
                 active: band.tone === "strong",
               },
               {
-                range: "50\u201364",
+                range: "50–64",
                 name: "Likely Fit",
                 body: "You’re close. The two or three statements you scored lowest become the discovery conversation.",
                 active: band.tone === "likely",
               },
               {
-                range: "35\u201349",
+                range: "35–49",
                 name: "Not Yet",
-                body: "Bandwidth, partner alignment, or financial position usually. Address those; revisit in 6\u201312 months.",
+                body: "Bandwidth, partner alignment, or financial position usually. Address those; revisit in 6–12 months.",
                 active: band.tone === "notyet",
               },
               {

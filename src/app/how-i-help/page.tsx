@@ -116,7 +116,18 @@ export default function HowIHelp() {
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-border flex flex-wrap gap-4">
+            <div className="mt-8 pt-8 border-t border-border">
+              <p className="eyebrow mb-2">Investment</p>
+              <p className="font-serif text-2xl">$1,964 / month · 27 months</p>
+              <p className="text-sm text-muted mt-2">
+                Total program investment is scoped in the discovery conversation
+                based on business size and complexity. The Readiness Assessment
+                tells you in fifteen minutes whether the program fits your situation
+                before any pricing conversation.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/architecture" className="btn-primary">
                 See the full program <ArrowRight size={18} />
               </Link>
@@ -124,11 +135,6 @@ export default function HowIHelp() {
                 Take the Readiness Assessment
               </Link>
             </div>
-
-            <p className="mt-6 text-sm text-muted">
-              Pricing is scoped in the discovery conversation. The assessment tells
-              you in fifteen minutes whether the program fits your situation.
-            </p>
           </div>
         </div>
       </section>
