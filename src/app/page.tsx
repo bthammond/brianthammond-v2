@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
-import { ArrowRight, Check, Sparkles, Target, Users, Compass } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Compass } from "lucide-react";
 
 const familyLetters = [
   { letter: "F", word: "Foundations" },
@@ -12,30 +12,39 @@ const familyLetters = [
   { letter: "Y", word: "Yield & Feedback" },
 ];
 
+const designSteps = [
+  { letter: "D", word: "Discover" },
+  { letter: "E", word: "Envision" },
+  { letter: "S", word: "Strategize" },
+  { letter: "I", word: "Implement" },
+  { letter: "G", word: "Govern" },
+  { letter: "N", word: "Nurture" },
+];
+
 const faqs = [
   {
-    q: "What does a family business advisor do?",
-    a: "A family business advisor helps owners of multi-generational enterprises navigate the work that consulting, coaching, and therapy don\u2019t cover on their own: succession planning, governance, generational communication, and growth. I sit between the family and the business and help both sides have the conversations that move the company forward.",
+    q: "What is the FAMILY Framework Architecture?",
+    a: "A 117-week, two-year transformation program for business owners ready to move from working in the business to working on it. Six modules. Weekly consulting sessions. A 21-tab Excel working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
   },
   {
-    q: "How is this different from hiring a business coach?",
-    a: "A coach works on you. An advisor works on the business alongside you. Family business advisory specifically addresses the structural and relational dynamics a generalist coach isn\u2019t equipped to handle \u2014 ownership transitions, shareholder agreements, next-gen readiness, family council structures, and the patterns only visible from the outside.",
+    q: "Who is this program for?",
+    a: "Owners or co-owners of businesses with 5 to 250 people and $1M to $250M in annual revenue. Family enterprises, founder-led businesses, and established mid-market companies. The common thread is willingness to commit two years to structural work — not a quick fix.",
   },
   {
-    q: "How much does working with you cost?",
-    a: "The flagship FAMILY Framework engagement is $1,964 per month with a 3-month minimum, backed by a 30-day money-back guarantee on month 1. A shorter 2\u20133 week Readiness Audit is $2,000 flat, and that fee credits in full toward month 1 if you engage the full Framework. Coaching and single-problem consults are scoped separately.",
+    q: "How is this different from hiring a business coach or a consulting firm?",
+    a: "A coach works on you. A consulting firm does the work for you for a quarter and hands it back. The Architecture program does neither. It's a structured, week-by-week practice you build into the business, with a consultant walking the discipline alongside you for two years. The goal is a business that runs on structure, not on presence.",
   },
   {
-    q: "When should a family business start planning for succession?",
-    a: "Five to ten years before the handoff. Owners who start earlier give the next generation time to develop, give themselves time to let go, and give the business time to test-run the transition while both generations can still correct course. Most owners start too late.",
+    q: "How much does the program cost?",
+    a: "The Architecture is a multi-year commitment, and pricing is scoped in the discovery conversation — every engagement is sized to the business, the team, and the specific work ahead. The 15-question Readiness Assessment tells you in fifteen minutes whether the program fits where you are today, before any conversation about investment.",
   },
   {
-    q: "Do you work with companies that aren\u2019t family-owned?",
-    a: "Yes \u2014 a smaller portion of my work is with founder-led businesses and solo entrepreneurs who want the same outside-eye pattern recognition. Most of my work is with 2nd and 3rd-generation family businesses between $2M and $50M in revenue, which is where the FAMILY Framework delivers the most value.",
+    q: "What is the DESIGN Method?",
+    a: "FAMILY names the six domains we build (Foundations, Alignment, Management, Innovation, Leadership, Yield & Feedback). The DESIGN Method names the six steps we use to build each one: Discover, Envision, Strategize, Implement, Govern, Nurture. FAMILY is the content. DESIGN is the discipline. Six letters and six steps, used together.",
   },
   {
-    q: "What is the FAMILY Framework?",
-    a: "A proprietary system built from 30+ years inside family enterprises, organized around six pillars: Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. Together they cover the work that sinks most family businesses \u2014 succession, governance, communication across generations, and growth. The methodology itself stays reserved for client engagements.",
+    q: "Do you work with businesses that aren't family-owned?",
+    a: "Yes. Family Enterprise is one of four practice areas, alongside Consulting & Coaching, Entrepreneur Strategy, and Financial Analysis. The Architecture works for family businesses, founder-led businesses, and established mid-market companies alike. The diagnostic and the readiness work the same across contexts.",
   },
 ];
 
@@ -56,23 +65,25 @@ export default function Home() {
       <section className="pt-20 pb-24">
         <div className="container-site grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
-            <p className="eyebrow mb-6">Family business advisor &middot; Entrepreneur mentor</p>
+            <p className="eyebrow mb-6">Strategic consultant · Family-business specialist · Builder of leaders</p>
             <h1 className="font-serif mb-6">
               You&apos;re in the business. That&apos;s why you can&apos;t see the <span className="underline-wavy">dots</span>.
             </h1>
-            <p className="text-xl max-w-xl mb-8">
-              I help second-generation family businesses and entrepreneurs connect the
-              dots, then build the right systems to grow. Thirty years of pattern
-              recognition, the <strong>FAMILY Framework</strong>, and the lived
-              experience of running my own multi-office family business across the US
-              — I&apos;m not a theorist. I get it because I&apos;m in it.
+            <p className="text-xl max-w-xl mb-6">
+              I help business owners — family enterprises, founders, and
+              established mid-market companies — do the long structural work of
+              moving from working <em>in</em> the business to working <em>on</em> it.
+              A 117-week program. Two frameworks. One transformation.
+            </p>
+            <p className="text-lg text-ink-soft mb-8">
+              <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/diagnostic" className="btn-primary">
-                Take the 10-min diagnostic <ArrowRight size={18} />
+              <Link href="/readiness" className="btn-primary">
+                Take the Readiness Assessment <ArrowRight size={18} />
               </Link>
-              <Link href="/contact" className="btn-outline">
-                Schedule a free consult
+              <Link href="/architecture" className="btn-outline">
+                See the Architecture program
               </Link>
             </div>
           </div>
@@ -81,7 +92,7 @@ export default function Home() {
               <div className="aspect-[4/5] bg-coral/10 rounded-3xl overflow-hidden border border-border">
                 <Image
                   src="/Hammond-Headshot.jpg"
-                  alt="Brian T. Hammond, family business advisor and entrepreneur mentor"
+                  alt="Brian T. Hammond, strategic consultant and family business specialist"
                   width={600}
                   height={750}
                   priority
@@ -93,25 +104,15 @@ export default function Home() {
                 <p className="font-serif text-lg mt-1">MBA, LSU</p>
               </div>
               <div className="absolute -top-6 -right-6 bg-gold text-foreground rounded-2xl p-4 shadow-lg hidden md:block">
-                <p className="text-xs uppercase tracking-widest font-bold">Experience</p>
-                <p className="font-serif text-lg mt-1">30+ years</p>
+                <p className="text-xs uppercase tracking-widest font-bold">Program</p>
+                <p className="font-serif text-lg mt-1">117 weeks</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PRACTITIONER CREDIBILITY STRIP */}
-      <section className="py-10 bg-foreground text-white">
-        <div className="container-site max-w-4xl text-center">
-          <p className="font-serif text-xl md:text-2xl leading-snug text-white">
-            I don&apos;t just study family business theory. <span className="underline-wavy">I run my own</span> — offices
-            stretched across the US. I get it because I&apos;m in it.
-          </p>
-        </div>
-      </section>
-
-      {/* THE PROBLEM — why */}
+      {/* THE PROBLEM */}
       <section className="py-20 bg-surface border-y border-border">
         <div className="container-site max-w-4xl text-center">
           <p className="eyebrow mb-4">The problem</p>
@@ -119,90 +120,110 @@ export default function Home() {
             You can&apos;t read the label from inside the bottle.
           </h2>
           <p className="text-xl leading-relaxed">
-            Family businesses don&apos;t fail because owners aren&apos;t smart.
-            They fail because owners are <em>in</em> the business — running the day —
+            Businesses don&apos;t stall because owners aren&apos;t smart. They stall
+            because owners are <em>in</em> the business — running the day —
             and can&apos;t see the patterns from that seat. The succession that
-            nobody&apos;s actually planning for. The communication that&apos;s drifted
-            across generations. The systems that worked at $2M and quietly break at $20M.
-            You know something&apos;s off. You can&apos;t quite name it. That&apos;s the job.
+            nobody&apos;s actually planning for. The communication that&apos;s
+            drifted. The systems that worked at $2M and quietly break at $20M. You
+            know something&apos;s off. You can&apos;t quite name it. That&apos;s the
+            job.
           </p>
         </div>
       </section>
 
-      {/* THE PROMISE */}
+      {/* TWO FRAMEWORKS */}
       <section className="py-24">
-        <div className="container-site grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5">
-            <p className="eyebrow mb-4">The promise</p>
+        <div className="container-site max-w-5xl">
+          <div className="max-w-3xl mb-14">
+            <p className="eyebrow mb-4">Two frameworks, working together</p>
             <h2 className="font-serif mb-6">
-              Connect the dots. Build the systems. Grow.
+              FAMILY is the content. DESIGN is the discipline.
             </h2>
-            <p className="text-lg mb-6">
-              That&apos;s the arc of every engagement. We start by seeing the
-              business clearly — the real one, not the one in the deck. Then we build
-              the systems the next chapter actually needs. Then you grow.
+            <p className="text-xl">
+              Six domains of work we build across the program. Six steps of discipline
+              we apply to every priority, every quarter, every hard decision — during
+              the program and for the rest of your career as an owner.
             </p>
-            <Link href="/how-i-help" className="link-arrow">
-              See how we work together <ArrowRight size={16} />
-            </Link>
           </div>
 
-          <div className="lg:col-span-7 grid sm:grid-cols-3 gap-4">
-            {[
-              { n: "01", title: "Connect", body: "See the patterns you can\u2019t see from inside." },
-              { n: "02", title: "Build", body: "Put the systems in place your next chapter needs." },
-              { n: "03", title: "Grow", body: "Scale on a foundation that won\u2019t crack under weight." },
-            ].map(({ n, title, body }) => (
-              <div key={n} className="p-6 border border-border rounded-2xl bg-surface">
-                <p className="font-serif text-2xl text-gold-deep mb-2">{n}</p>
-                <h3 className="font-serif text-lg mb-2">{title}</h3>
-                <p className="text-sm text-ink-soft">{body}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* FAMILY */}
+            <Link
+              href="/family-framework"
+              className="group p-8 border-2 border-coral rounded-2xl bg-surface hover:shadow-lg transition"
+            >
+              <p className="eyebrow mb-4">FAMILY · what we build</p>
+              <div className="grid grid-cols-6 gap-1 mb-6">
+                {familyLetters.map(({ letter, word }) => (
+                  <div key={letter} className="text-center min-w-0">
+                    <div className="font-serif text-3xl text-coral leading-none">{letter}</div>
+                    <div className="text-[9px] uppercase tracking-wider text-ink-soft mt-1 truncate">{word}</div>
+                  </div>
+                ))}
               </div>
-            ))}
+              <p className="text-ink-soft mb-4">
+                Foundations, Alignment, Management, Innovation, Leadership, Yield &
+                Feedback. The six domains of a durable business.
+              </p>
+              <span className="link-arrow">
+                Explore FAMILY <ArrowRight size={16} />
+              </span>
+            </Link>
+
+            {/* DESIGN */}
+            <Link
+              href="/design-method"
+              className="group p-8 border-2 border-gold rounded-2xl bg-surface hover:shadow-lg transition"
+            >
+              <p className="eyebrow mb-4">DESIGN · how we build</p>
+              <div className="grid grid-cols-6 gap-1 mb-6">
+                {designSteps.map(({ letter, word }) => (
+                  <div key={letter} className="text-center min-w-0">
+                    <div className="font-serif text-3xl text-gold-deep leading-none">{letter}</div>
+                    <div className="text-[9px] uppercase tracking-wider text-ink-soft mt-1 truncate">{word}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-ink-soft mb-4">
+                Discover, Envision, Strategize, Implement, Govern, Nurture. The
+                discipline applied to every strategic question, forever.
+              </p>
+              <span className="link-arrow">
+                Explore DESIGN <ArrowRight size={16} />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* FAMILY FRAMEWORK TEASER */}
+      {/* ARCHITECTURE TEASER */}
       <section className="py-24 bg-surface border-y border-border">
-        <div className="container-site">
-          <div className="max-w-3xl mb-14">
-            <p className="eyebrow mb-4">My proprietary system</p>
+        <div className="container-site max-w-5xl">
+          <div className="max-w-3xl mb-10">
+            <p className="eyebrow mb-4">The Architecture</p>
             <h2 className="font-serif mb-6">
-              The FAMILY Framework: six pillars for businesses that want to outlast the founder.
+              117 weeks. Six modules. One transformation.
             </h2>
             <p className="text-xl">
-              The system I&apos;ve built over three decades inside family enterprises.
-              Six pillars that together do what no individual consultant, coach, or
-              advisor typically covers alone.
+              The Architecture is the signature program where the two frameworks
+              meet your business. Weekly consulting sessions. A 21-tab Excel
+              working system. Bound companion books. Two and a quarter years of
+              structured, disciplined work.
             </p>
-          </div>
-
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-y-6 md:gap-y-0 md:gap-x-4 text-center mb-10">
-            {familyLetters.map(({ letter, word }) => (
-              <div key={letter} className="flex flex-col items-center min-w-0">
-                <span className="font-serif text-5xl md:text-6xl lg:text-7xl text-coral leading-none">
-                  {letter}
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-ink-soft mt-2 font-semibold px-1 leading-tight">
-                  {word}
-                </span>
-              </div>
-            ))}
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/family-framework" className="btn-primary">
-              Explore the FAMILY Framework <ArrowRight size={18} />
+            <Link href="/architecture" className="btn-primary">
+              Explore the Architecture <ArrowRight size={18} />
             </Link>
-            <Link href="/diagnostic" className="btn-outline">
-              See where you stand (10 min)
+            <Link href="/readiness" className="btn-outline">
+              See where you stand (15 min)
             </Link>
           </div>
         </div>
       </section>
 
-      {/* WHY ME — real social proof, no fake testimonials */}
+      {/* WHY ME — real social proof */}
       <section className="py-24">
         <div className="container-site">
           <div className="max-w-3xl mb-14">
@@ -222,21 +243,21 @@ export default function Home() {
               {
                 stat: "I live it",
                 label: "Practitioner, not theorist",
-                body: "I own and operate my own multi-office family business. When I talk about succession, I\u2019m reporting from the same seat you\u2019re sitting in.",
+                body: "I own and operate my own multi-office family business. When I talk about succession, I’m reporting from the same seat you’re sitting in.",
               },
               {
-                stat: "6",
-                label: "Pillars, one system",
-                body: "The proprietary FAMILY Framework covers what consulting, coaching, and therapy don\u2019t handle together — all six pillars, one integrated engagement.",
+                stat: "6 + 6",
+                label: "Two frameworks, not one",
+                body: "FAMILY names the six domains we build. DESIGN names the six steps we use. The content and the discipline, held together, across 117 weeks.",
               },
               {
-                stat: "30 days",
-                label: "Money-back guarantee",
-                body: "Engage the Framework with zero risk on month 1. If the work isn\u2019t delivering clear value by day 30, I refund it. No questions.",
+                stat: "117 wks",
+                label: "A program, not a sprint",
+                body: "A committed two-year engagement with weekly sessions, structured work, and bound companion books. Built for transformation that holds.",
               },
             ].map(({ stat, label, body }) => (
               <div key={label} className="p-8 border border-border rounded-2xl bg-surface">
-                <p className="font-serif text-5xl text-coral leading-none mb-2">{stat}</p>
+                <p className="font-serif text-4xl text-coral leading-none mb-2">{stat}</p>
                 <p className="eyebrow mb-4">{label}</p>
                 <p className="text-ink-soft">{body}</p>
               </div>
@@ -245,47 +266,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS — reserved space. Swap in real client quotes when you collect them.
-          Intentionally left OUT of the rendered site until real content exists.
-          When ready, uncomment the JSX below AND update the `testimonials` array with
-          actual client quotes. Keep attributions truthful (role + industry). */}
-      {/*
-      <section className="py-20 bg-foreground text-white">
-        <div className="container-site max-w-5xl">
-          <p className="eyebrow text-gold mb-4">What clients say</p>
-          <h2 className="font-serif mb-12 text-white">Voices from the work.</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map(({ quote, name, role }) => (
-              <blockquote key={name} className="p-8 border border-white/10 rounded-2xl">
-                <p className="font-serif text-xl leading-snug text-white mb-6">
-                  &ldquo;{quote}&rdquo;
-                </p>
-                <footer className="text-white/70 text-sm">
-                  <strong className="text-white">{name}</strong> — {role}
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
-
-      {/* WHO I HELP — sharp ICP */}
-      <section className="py-24">
+      {/* WHO I HELP */}
+      <section className="py-24 bg-surface border-y border-border">
         <div className="container-site grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5">
             <p className="eyebrow mb-4">Who I help</p>
             <h2 className="font-serif mb-6">
-              Second-generation family businesses with real stakes.
+              Owners ready to build something durable.
             </h2>
             <p className="mb-6">
-              If you&apos;re a second or third-generation owner running a $2M–$50M
-              family business, five to ten years from a handoff you haven&apos;t
-              really planned yet — this work was built for you.
-            </p>
-            <p className="mb-6 text-muted">
-              I also work with a smaller number of founder-led businesses and solo
-              entrepreneurs who want the same pattern-recognition from the outside.
+              Family enterprises, founder-led businesses, and established mid-market
+              companies. Typically 5 to 250 people, $1M to $250M in revenue. The
+              common thread is willingness to do the structural work the next
+              chapter requires.
             </p>
             <Link href="/who-i-help" className="link-arrow">
               See if this is you <ArrowRight size={16} />
@@ -293,16 +286,16 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="p-8 border border-border rounded-2xl bg-surface">
-              <p className="eyebrow mb-4">Primary client</p>
-              <h3 className="font-serif mb-4">The 2nd-gen family business</h3>
+            <div className="p-8 border border-border rounded-2xl bg-background">
+              <p className="eyebrow mb-4">The shape of the right owner</p>
+              <h3 className="font-serif mb-4">Built something real. Ready to build something durable.</h3>
               <ul className="space-y-3">
                 {[
-                  "Revenue between $2M and $50M",
-                  "Multi-generational — second or third generation at the helm",
-                  "Owner is 5–10 years from handing off, or wondering when to start",
-                  "The old systems still kind of work, but you can feel them straining",
-                  "Family and business dynamics are tangled and it\u2019s costing money",
+                  "5 to 250 people, $1M to $250M in revenue",
+                  "Owner or co-owner with authority over major decisions",
+                  "Built through hard work; the model has reached its limits",
+                  "Ready to work on the business, not just in it",
+                  "Willing to commit two years to real structural work",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <Check size={18} className="text-coral shrink-0 mt-1" />
@@ -315,49 +308,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES — brief */}
-      <section className="py-20 bg-surface border-y border-border">
+      {/* PRACTICE AREAS */}
+      <section className="py-20">
         <div className="container-site">
           <div className="max-w-2xl mb-12">
             <p className="eyebrow mb-4">How I help</p>
-            <h2 className="font-serif">Four ways to work together.</h2>
+            <h2 className="font-serif">One flagship program. Four practice areas.</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Sparkles,
-                title: "FAMILY Framework",
-                body: "Deep, multi-month engagement across all six pillars. The flagship. 30-day money-back guarantee on month 1.",
-                href: "/how-i-help#family-framework",
+                title: "The Architecture",
+                body: "The 117-week flagship transformation program. Weekly sessions, bound companions, a 21-tab working system.",
+                href: "/architecture",
+                primary: true,
               },
               {
-                icon: Compass,
-                title: "Readiness Audit",
-                body: "A paid 2–3 week deep-dive. Test the fit before committing. $2,000 credits in full toward month 1 of the Framework.",
-                href: "/how-i-help#readiness-audit",
+                title: "Consulting & Coaching",
+                body: "Long-form transformation engagements for owners and leadership teams. The Architecture lives here.",
+                href: "/how-i-help#consulting-coaching",
               },
               {
-                icon: Target,
-                title: "Strategy & Succession",
-                body: "Targeted engagements on a specific problem — a succession gap, a governance mess, a stalled strategic plan.",
-                href: "/how-i-help#strategy",
+                title: "Family Enterprise",
+                body: "Multi-generational family businesses navigating governance, succession, and continuity.",
+                href: "/how-i-help#family-enterprise",
               },
               {
-                icon: Users,
-                title: "Coaching & Mentorship",
-                body: "Ongoing one-on-one work for owners and next-gen leaders. Sharper decisions, fewer expensive mistakes.",
-                href: "/how-i-help#coaching",
+                title: "Entrepreneur Strategy",
+                body: "Founders and CEOs scaling beyond the founder-dependent stage.",
+                href: "/how-i-help#entrepreneur-strategy",
               },
-            ].map(({ icon: Icon, title, body, href }) => (
+            ].map(({ icon: Icon, title, body, href, primary }) => (
               <Link
                 key={title}
                 href={href}
-                className="group p-8 border border-border rounded-2xl bg-background hover:border-coral transition-colors"
+                className={`group p-8 border rounded-2xl bg-surface hover:border-coral transition-colors ${
+                  primary ? "border-coral" : "border-border"
+                }`}
               >
-                <div className="w-12 h-12 rounded-xl bg-coral/10 text-coral flex items-center justify-center mb-6 group-hover:bg-coral group-hover:text-white transition">
-                  <Icon size={22} />
-                </div>
+                {Icon && (
+                  <div className="w-12 h-12 rounded-xl bg-coral/10 text-coral flex items-center justify-center mb-6 group-hover:bg-coral group-hover:text-white transition">
+                    <Icon size={22} />
+                  </div>
+                )}
+                {primary && <p className="eyebrow mb-2">Flagship</p>}
                 <h3 className="font-serif mb-3">{title}</h3>
                 <p className="text-ink-soft mb-6">{body}</p>
                 <span className="link-arrow">
@@ -366,10 +362,13 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="mt-6 text-sm text-muted">
+            Also available: <Link href="/how-i-help#financial-analysis" className="link-arrow">Financial Analysis</Link> — diagnostic and strategic financial work supporting major decisions.
+          </div>
         </div>
       </section>
 
-      {/* FAQ — also fuels FAQPage rich snippets in Google */}
+      {/* FAQ */}
       <section className="py-24 bg-surface border-y border-border">
         <div className="container-site max-w-3xl">
           <p className="eyebrow mb-4">Frequently asked</p>
@@ -393,25 +392,25 @@ export default function Home() {
         <div className="container-site max-w-3xl text-center">
           <p className="eyebrow mb-4">Start here</p>
           <h2 className="font-serif mb-6">
-            Not sure if we&apos;re a fit? Take 10 minutes to find out.
+            Two assessments. Pick the one that fits.
           </h2>
           <p className="text-xl mb-8">
-            A short self-assessment across the six FAMILY pillars. You&apos;ll get a
-            clear read on where your business stands today and which pillars need
-            attention first. Free, no pressure.
+            The 10-minute FAMILY diagnostic scores your <em>business</em> across the
+            six domains. The 15-minute Readiness Assessment scores <em>you</em> on
+            fit for the Architecture program. Start with whichever feels more
+            urgent.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/diagnostic" className="btn-primary">
-              Start the diagnostic <ArrowRight size={18} />
+            <Link href="/readiness" className="btn-primary">
+              Readiness Assessment (15 min) <ArrowRight size={18} />
             </Link>
-            <Link href="/contact" className="btn-outline">
-              Or schedule a consult
+            <Link href="/diagnostic" className="btn-outline">
+              Business Diagnostic (10 min)
             </Link>
           </div>
         </div>
       </section>
 
-      {/* FAQPage structured data for rich results in Google */}
       <Script
         id="faq-jsonld"
         type="application/ld+json"

@@ -37,10 +37,13 @@ export default function Footer() {
           <div>
             <h4 className="text-gold text-xs font-semibold uppercase tracking-widest mb-4">Explore</h4>
             <ul className="space-y-2 text-white/80">
+              <li><Link href="/architecture" className="hover:text-gold transition">The Architecture</Link></li>
               <li><Link href="/family-framework" className="hover:text-gold transition">FAMILY Framework</Link></li>
-              <li><Link href="/diagnostic" className="hover:text-gold transition">Diagnostic</Link></li>
+              <li><Link href="/design-method" className="hover:text-gold transition">DESIGN Method</Link></li>
               <li><Link href="/how-i-help" className="hover:text-gold transition">How I help</Link></li>
               <li><Link href="/who-i-help" className="hover:text-gold transition">Who I help</Link></li>
+              <li><Link href="/readiness" className="hover:text-gold transition">Readiness Assessment</Link></li>
+              <li><Link href="/diagnostic" className="hover:text-gold transition">Business Diagnostic</Link></li>
               <li><Link href="/about" className="hover:text-gold transition">About</Link></li>
               <li><Link href="/insights" className="hover:text-gold transition">Insights</Link></li>
               <li><Link href="/contact" className="hover:text-gold transition">Contact</Link></li>

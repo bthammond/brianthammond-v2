@@ -294,33 +294,33 @@ function ResultsScreen({ answers, onRetake }: { answers: Answers; onRetake: () =
             {/* Path A — free consult */}
             <div className="p-8 border border-border rounded-2xl bg-background flex flex-col">
               <p className="eyebrow mb-3">Path A · Free</p>
-              <h3 className="font-serif mb-4">Schedule a 30-minute consult</h3>
+              <h3 className="font-serif mb-4">Schedule a discovery conversation</h3>
               <p className="mb-6 text-ink-soft flex-1">
-                We get on a call. You tell me what&apos;s behind these numbers,
+                A 45-minute call. You tell me what&apos;s behind these numbers,
                 I&apos;ll share what I&apos;m seeing, and you&apos;ll leave with a
-                clear read on what to do next — whether that&apos;s the FAMILY
-                Framework, something else, or nothing at all.
+                clear read on what to do next — whether that&apos;s the Architecture
+                program, something else, or nothing at all.
               </p>
               <Link
                 href={`/contact?score=${overall}&weak=${weakest.map((w) => w.pillar).join(",")}`}
                 className="btn-primary w-full sm:w-auto"
               >
-                Schedule the consult <ArrowRight size={18} />
+                Schedule the conversation <ArrowRight size={18} />
               </Link>
             </div>
 
-            {/* Path B — paid audit */}
+            {/* Path B — readiness assessment */}
             <div className="p-8 border-2 border-gold rounded-2xl bg-cream-deep flex flex-col">
-              <p className="eyebrow mb-3">Path B · $2,000</p>
-              <h3 className="font-serif mb-4">The Readiness Audit</h3>
+              <p className="eyebrow mb-3">Path B · 15 minutes</p>
+              <h3 className="font-serif mb-4">Take the Readiness Assessment</h3>
               <p className="mb-6 text-ink-soft flex-1">
-                A 2- to 3-week paid deep-dive. Interviews with you and key family
-                members, a written assessment, and a 90-minute debrief. If you engage
-                the full FAMILY Framework after, <strong>the $2,000 credits in full
-                toward month 1.</strong>
+                This diagnostic scored your <em>business</em>. The Readiness Assessment
+                scores <em>you</em> — your bandwidth, authority, and readiness to commit
+                to the 117-week Architecture program. Fifteen questions. Fifteen minutes.
+                A clear band: Strong Fit, Likely Fit, Not Yet, or Different Program.
               </p>
-              <Link href="/how-i-help#readiness-audit" className="btn-outline w-full sm:w-auto">
-                Learn about the Audit <ArrowRight size={18} />
+              <Link href="/readiness" className="btn-outline w-full sm:w-auto">
+                Start the assessment <ArrowRight size={18} />
               </Link>
             </div>
           </div>

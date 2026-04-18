@@ -4,31 +4,48 @@ import { ArrowRight, Check, Lock } from "lucide-react";
 export const metadata = {
   title: "The FAMILY Framework",
   description:
-    "Six pillars for family businesses that want to outlast the founder — Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. A proprietary system built from 30+ years inside family enterprises.",
+    "Six domains of work for building a durable business: Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. FAMILY is what we build; the DESIGN Method is how we build it.",
 };
 
-// Public-facing: one line per pillar. The mechanics stay behind the paywall.
-const pillars = [
-  { letter: "F", word: "Foundations", promise: "Get clear on the values and history that quietly run the business." },
-  { letter: "A", word: "Alignment", promise: "Build the communication channels that keep generations in step." },
-  { letter: "M", word: "Management", promise: "Put governance and metrics in place that survive the transition." },
-  { letter: "I", word: "Innovation", promise: "Evolve the business without breaking what made it work." },
-  { letter: "L", word: "Leadership", promise: "Prepare the next generation so the handoff doesn\u2019t fumble." },
-  { letter: "Y", word: "Yield & Feedback", promise: "Install the feedback loops that keep the plan honest." },
-];
-
-const phases = [
-  { n: "01", title: "Discover", body: "We map the family, the business, and the tensions nobody\u2019s naming." },
-  { n: "02", title: "Align", body: "We build shared language and goals the whole system can stand behind." },
-  { n: "03", title: "Build", body: "We put the structures, governance, and plans in place." },
-  { n: "04", title: "Sustain", body: "We install the feedback loops so the work holds, year over year." },
+// Public-facing: one line per domain. The mechanics stay behind the paywall.
+const domains = [
+  {
+    letter: "F",
+    word: "Foundations & Values",
+    promise: "History, legacy, and the core values that drive how the business actually decides.",
+  },
+  {
+    letter: "A",
+    word: "Alignment & Aspirations",
+    promise: "Communication channels and goals shared across team, leadership, and (where applicable) family.",
+  },
+  {
+    letter: "M",
+    word: "Monitoring & Management",
+    promise: "Governance, KPIs, and the operating rhythm that makes accountability visible.",
+  },
+  {
+    letter: "I",
+    word: "Innovation & Integration",
+    promise: "Evolution, diversification, and capability development that carry the business forward.",
+  },
+  {
+    letter: "L",
+    word: "Leadership Transition",
+    promise: "Succession, mentoring, and the stewardship discipline that prepares the next generation.",
+  },
+  {
+    letter: "Y",
+    word: "Yield & Feedback",
+    promise: "Feedback mechanisms, advisor engagement, and continuous improvement over time.",
+  },
 ];
 
 const outcomes = [
-  "A succession plan the next generation is genuinely ready for — not just a signed document",
-  "Governance that separates family dynamics from business decisions",
-  "Honest communication channels across generations and branches",
-  "A plan that still works a year from now, not just at the offsite",
+  "A succession or transition plan the next generation is genuinely ready for — not just a signed document",
+  "Governance that separates family or ownership dynamics from business decisions",
+  "KPIs and an operating rhythm that make accountability visible every week",
+  "Systems and people capable of running the business without you in it every day",
 ];
 
 export default function FamilyFramework() {
@@ -39,27 +56,24 @@ export default function FamilyFramework() {
         <div className="container-site max-w-4xl">
           <p className="eyebrow mb-4">The FAMILY Framework</p>
           <h1 className="font-serif mb-6">
-            Six pillars for family businesses that want to outlast the founder.
+            Six domains for building a business that outlasts the founder.
           </h1>
           <p className="text-xl mb-6">
-            Most family businesses don&apos;t fail because of market forces. They fail
-            because of the things nobody wants to talk about: succession, governance,
-            communication across generations. FAMILY is the system I&apos;ve built over
-            three decades for getting those conversations right — and turning them into
-            a business that&apos;s ready for the next chapter.
+            Most businesses stall because of the work owners don&apos;t want to do —
+            the succession, the governance, the KPIs, the generational conversation.
+            FAMILY is the system I&apos;ve built over three decades of advising family
+            enterprises, founders, and established mid-market companies. Six domains,
+            addressed across the full arc of an engagement.
           </p>
-          <p className="text-lg text-ink-soft mb-8 italic">
-            I didn&apos;t build this from a textbook. I run my own family business with
-            offices stretched across the US. The FAMILY Framework is the system I use
-            on my own business first — and the one I&apos;ve refined inside client
-            engagements for thirty years.
+          <p className="text-lg text-ink-soft mb-8">
+            <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/diagnostic" className="btn-primary">
-              Take the 10-minute diagnostic <ArrowRight size={18} />
+            <Link href="/architecture" className="btn-primary">
+              See the 117-week Architecture program <ArrowRight size={18} />
             </Link>
-            <Link href="/contact" className="btn-outline">
-              Schedule a free consult
+            <Link href="/diagnostic" className="btn-outline">
+              Take the 10-minute diagnostic
             </Link>
           </div>
         </div>
@@ -69,7 +83,7 @@ export default function FamilyFramework() {
       <section className="py-16 bg-surface border-y border-border">
         <div className="container-site">
           <div className="grid grid-cols-3 md:grid-cols-6 gap-y-10 md:gap-y-0 md:gap-x-4 text-center">
-            {pillars.map(({ letter, word }) => (
+            {domains.map(({ letter, word }) => (
               <div key={letter} className="flex flex-col items-center min-w-0">
                 <span className="font-serif text-6xl sm:text-7xl md:text-7xl lg:text-8xl text-coral leading-none">
                   {letter}
@@ -82,7 +96,7 @@ export default function FamilyFramework() {
           </div>
 
           <div className="mt-16 grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
-            {pillars.map(({ letter, word, promise }) => (
+            {domains.map(({ letter, word, promise }) => (
               <div key={letter} className="flex gap-4">
                 <span className="font-serif text-3xl text-gold-deep leading-none shrink-0 w-8">{letter}</span>
                 <p><strong className="text-foreground">{word}.</strong> {promise}</p>
@@ -92,18 +106,48 @@ export default function FamilyFramework() {
         </div>
       </section>
 
-      {/* OUTCOMES — the promise, not the mechanics */}
-      <section className="py-24">
-        <div className="container-site grid lg:grid-cols-12 gap-12">
+      {/* TWO FRAMEWORKS */}
+      <section className="py-20">
+        <div className="container-site max-w-4xl">
+          <p className="eyebrow mb-4">Two frameworks, working together</p>
+          <h2 className="font-serif mb-6">FAMILY is the content. DESIGN is the discipline.</h2>
+          <p className="text-lg mb-10">
+            FAMILY names the six domains we build across an engagement. The DESIGN
+            Method is the repeatable discipline applied to every priority, every
+            quarter, every hard question — in the program and for the rest of your
+            career as an owner.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 border-2 border-coral rounded-2xl bg-background">
+              <p className="eyebrow mb-3">FAMILY</p>
+              <h3 className="font-serif mb-3">Six domains — what we build</h3>
+              <p className="mb-6 text-ink-soft">Foundations. Alignment. Management. Innovation. Leadership. Yield & Feedback.</p>
+              <span className="text-muted text-sm">You&apos;re on the page.</span>
+            </div>
+            <div className="p-8 border-2 border-gold rounded-2xl bg-background">
+              <p className="eyebrow mb-3">DESIGN</p>
+              <h3 className="font-serif mb-3">Six steps — how we build</h3>
+              <p className="mb-6 text-ink-soft">Discover. Envision. Strategize. Implement. Govern. Nurture.</p>
+              <Link href="/design-method" className="link-arrow">
+                Explore DESIGN <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUTCOMES */}
+      <section className="py-20 bg-surface border-y border-border">
+        <div className="container-site grid lg:grid-cols-12 gap-12 max-w-5xl">
           <div className="lg:col-span-5">
             <p className="eyebrow mb-4">What changes</p>
             <h2 className="font-serif mb-6">
-              The outcome: a business that&apos;s ready for what&apos;s next.
+              The outcome: a business capable of running without you in it every day.
             </h2>
             <p>
-              The framework is the system. But what you&apos;re buying is the outcome
-              — a family enterprise that runs on clear agreements instead of unspoken
-              assumptions.
+              The framework is the system. But what you&apos;re buying is the outcome —
+              an enterprise that runs on clear agreements, visible scoreboards, and
+              named accountability, instead of on your presence.
             </p>
           </div>
           <div className="lg:col-span-7">
@@ -119,31 +163,7 @@ export default function FamilyFramework() {
         </div>
       </section>
 
-      {/* PHASES — high level */}
-      <section className="py-20 bg-surface border-y border-border">
-        <div className="container-site">
-          <div className="max-w-3xl mb-14">
-            <p className="eyebrow mb-4">How we work together</p>
-            <h2 className="font-serif mb-6">A four-phase engagement.</h2>
-            <p className="text-xl">
-              Every engagement follows the same arc. The specifics are tailored to
-              your family and your business.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {phases.map(({ n, title, body }) => (
-              <div key={n} className="p-8 bg-background border border-border rounded-2xl">
-                <p className="font-serif text-3xl text-gold-deep mb-2">{n}</p>
-                <h3 className="font-serif mb-3">{title}</h3>
-                <p>{body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROPRIETARY NOTE — signals this is real IP */}
+      {/* PROPRIETARY NOTE */}
       <section className="py-20">
         <div className="container-site max-w-3xl">
           <div className="flex gap-4 p-8 border border-border rounded-2xl bg-cream-deep">
@@ -151,10 +171,11 @@ export default function FamilyFramework() {
             <div>
               <h3 className="font-serif text-xl mb-2">The methodology stays in the room.</h3>
               <p>
-                The exercises, diagnostics, and specific tools inside each pillar are
-                proprietary and reserved for client engagements. What you see here is
-                the shape — not the playbook. Serious about putting it to work in your
-                business? Start with a conversation.
+                The exercises, diagnostics, and specific tools inside each domain are
+                proprietary and reserved for client engagements — delivered through
+                the 117-week Architecture program with a bound Client Workbook, a
+                21-tab Excel working system, and weekly consulting sessions. What you
+                see on this page is the shape, not the playbook.
               </p>
             </div>
           </div>
@@ -164,17 +185,18 @@ export default function FamilyFramework() {
       {/* CTA */}
       <section className="py-24 bg-foreground text-white">
         <div className="container-site max-w-3xl text-center">
-          <h2 className="font-serif mb-6 text-white">Not sure if FAMILY is right for you?</h2>
+          <h2 className="font-serif mb-6 text-white">Ready to put FAMILY to work?</h2>
           <p className="text-xl mb-8 text-white/80">
-            Take the 10-minute diagnostic. You&apos;ll get a clear read on where your
-            family business stands today and which pillars need the most work.
+            The Architecture is the 117-week program where FAMILY and the DESIGN
+            Method meet your business. Start with the Readiness Assessment to see if
+            it&apos;s the right next step for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/diagnostic" className="btn-primary !bg-gold !text-foreground hover:!bg-gold-deep">
-              Start the diagnostic <ArrowRight size={18} />
+            <Link href="/readiness" className="btn-primary !bg-gold !text-foreground hover:!bg-gold-deep">
+              Take the Readiness Assessment <ArrowRight size={18} />
             </Link>
-            <Link href="/contact" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-foreground">
-              Or schedule a call
+            <Link href="/architecture" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-foreground">
+              See the Architecture program
             </Link>
           </div>
         </div>

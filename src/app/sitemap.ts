@@ -5,7 +5,10 @@ const BASE = "https://www.brianthammond.com";
 
 const staticRoutes = [
   "",
+  "/architecture",
   "/family-framework",
+  "/design-method",
+  "/readiness",
   "/diagnostic",
   "/how-i-help",
   "/who-i-help",

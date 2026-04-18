@@ -5,10 +5,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const nav = [
-  { href: "/family-framework", label: "FAMILY Framework" },
+  { href: "/architecture", label: "The Architecture" },
   { href: "/how-i-help", label: "How I help" },
   { href: "/who-i-help", label: "Who I help" },
-  { href: "/diagnostic", label: "Diagnostic" },
+  { href: "/readiness", label: "Readiness" },
   { href: "/about", label: "About" },
   { href: "/insights", label: "Insights" },
 ];

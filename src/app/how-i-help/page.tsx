@@ -1,167 +1,189 @@
 import Link from "next/link";
-import { ArrowRight, Target, Users, Check, Sparkles, Compass, Shield } from "lucide-react";
+import { ArrowRight, Sparkles, MessagesSquare, Home, Rocket, Calculator, Check } from "lucide-react";
 
 export const metadata = {
-  title: "How I help — FAMILY Framework, Readiness Audit, Strategy, Coaching",
+  title: "How I help — The Architecture Program and Four Practice Areas",
   description:
-    "Four ways to work together: the flagship FAMILY Framework engagement ($1,964/mo, 30-day guarantee), a $2,000 Readiness Audit, targeted strategy & succession consults, and 1:1 coaching. Built for 2nd-generation family businesses.",
+    "The FAMILY Framework Architecture is the flagship 117-week program. Practice areas: Consulting & Coaching, Family Enterprise, Entrepreneur Strategy, and Financial Analysis.",
 };
 
-type Service = {
-  id: string;
-  icon: typeof Sparkles;
-  title: string;
-  tagline: string;
-  body: string;
-  items: string[];
-  price?: string;
-  footer?: { label: string; href: string };
-  primary?: boolean;
-  highlight?: string;
-};
-
-const services: Service[] = [
+const practiceAreas = [
   {
-    id: "family-framework",
-    icon: Sparkles,
-    title: "FAMILY Framework Engagement",
-    tagline: "The flagship. Multi-month, multi-pillar, built for family businesses that mean it.",
-    body: "A structured engagement across all six FAMILY pillars — Foundations, Alignment, Management, Innovation, Leadership, and Yield & Feedback. You come out with the systems, governance, and succession plan the next chapter needs.",
-    items: [
-      "Six-pillar, multi-month engagement",
-      "Family and business assessed together, not separately",
-      "Governance, succession, and communication built in",
-      "Systems designed to outlast the founder",
-      "Best for: $2M–$50M family businesses 5–10 years from transition",
+    id: "consulting-coaching",
+    icon: MessagesSquare,
+    title: "Consulting & Coaching",
+    body: "Long-form transformation engagements for owners and leadership teams. Deep structural work on operating rhythm, strategic priorities, decision-rights, and the owner's own leadership practice. The Architecture program lives here, along with shorter scoped engagements where the fit is right.",
+    highlights: [
+      "Weekly sessions with structured between-session work",
+      "Scoreboards and cadences installed",
+      "Leadership practices built, not just discussed",
     ],
-    price: "$1,964/month · 3-month minimum",
-    footer: { label: "See the framework", href: "/family-framework" },
-    primary: true,
-    highlight: "30-day money-back guarantee on month 1 — if you\u2019re not seeing clear value by day 30, I refund it. No questions.",
   },
   {
-    id: "readiness-audit",
-    icon: Compass,
-    title: "The Readiness Audit",
-    tagline: "A paid deep-dive. Not ready for a 90-day engagement? Start here.",
-    body: "A 2- to 3-week paid discovery built for owners who want to work with me before committing to the full Framework. We do structured interviews with you and key family members, assess where you stand across the six pillars, and deliver a written report with a clear read on the work ahead.",
-    items: [
-      "Two to three weeks, start to finish",
-      "Two interview sessions with owner + key family members",
-      "Written assessment across all six FAMILY pillars",
-      "90-minute debrief session with action priorities",
-      "100% of the fee credits toward month 1 if you engage the full Framework",
+    id: "family-enterprise",
+    icon: Home,
+    title: "Family Enterprise",
+    body: "Multi-generational family businesses navigating governance, succession, and continuity. The conversations most families can't have without someone in the middle — next-generation readiness, role clarity, shareholder agreements, family councils, and the quiet work of preparing a legacy to transfer.",
+    highlights: [
+      "Governance structures that separate family and business",
+      "Succession plans the next generation is actually ready for",
+      "Communication channels that outlast the founding owner",
     ],
-    price: "$2,000 flat",
-    highlight: "Fee credits in full toward the FAMILY Framework engagement — so if you go from Audit to Framework, month 1 is essentially covered.",
   },
   {
-    id: "strategy",
-    icon: Target,
-    title: "Strategy & Succession Consults",
-    tagline: "Targeted engagements on a specific problem you need solved now.",
-    body: "Shorter, sharper work when you know what\u2019s broken and need outside help fixing it. A stalled strategic plan, a messy governance structure, a succession conversation that keeps getting punted.",
-    items: [
-      "Strategic planning workshops",
-      "Succession roadmap & readiness reviews",
-      "Governance structure design",
-      "Board & family council facilitation",
-      "Best for: owners with a specific problem to solve",
+    id: "entrepreneur-strategy",
+    icon: Rocket,
+    title: "Entrepreneur Strategy",
+    body: "Founders and CEOs scaling beyond the founder-dependent stage. The systems, hires, and operating discipline that turn a business running on your presence into one running on structure. Includes the hardest step of all — hiring the Integrator and actually letting them lead.",
+    highlights: [
+      "Getting out of daily operations without losing the thread",
+      "Building the leadership team the next chapter requires",
+      "The operator's transition from founder to CEO",
     ],
-    price: "Scoped to the problem",
   },
   {
-    id: "coaching",
-    icon: Users,
-    title: "Coaching & Mentorship",
-    tagline: "One-on-one work for owners and next-generation leaders.",
-    body: "Ongoing coaching for leaders who want a thinking partner in the chair with them. We meet regularly, work on the real problems, and you leave each session with sharper decisions and a clearer head.",
-    items: [
-      "1:1 founder & owner coaching",
-      "Next-gen leader mentoring",
-      "Quarterly strategy reviews",
-      "Decision-making frameworks",
-      "Best for: owners wanting an ongoing outside voice",
+    id: "financial-analysis",
+    icon: Calculator,
+    title: "Financial Analysis",
+    body: "Diagnostic and strategic financial work supporting major decisions. KPIs owners should know cold. Unit economics. Financial baselines and targets. The numbers you need to see to make the strategic moves with confidence instead of hope.",
+    highlights: [
+      "Financial baseline and Weekly Revenue Target",
+      "KPI scoreboard across growth, profit, and cash",
+      "Analysis to support pricing, hiring, and expansion decisions",
     ],
-    price: "Monthly retainer",
   },
 ];
 
 export default function HowIHelp() {
   return (
     <>
+      {/* HERO */}
       <section className="pt-20 pb-16">
         <div className="container-site max-w-3xl">
           <p className="eyebrow mb-4">How I help</p>
           <h1 className="font-serif mb-6">
-            Four ways to work together. One goal: connect the dots and build the systems to grow.
+            One flagship program. Four practice areas.
           </h1>
-          <p className="text-xl">
-            Most clients start with the FAMILY Framework. Some test the waters with the
-            Readiness Audit first. Others come to me for a single-problem consult, or
-            ongoing coaching. All four share the same arc — see clearly, build right,
-            grow durably.
+          <p className="text-xl mb-6">
+            Most of the work I do sits inside the Architecture — a 117-week
+            transformation program for owners ready to work on the business. The
+            four practice areas below describe the contexts where that work lives.
+          </p>
+          <p className="text-lg text-ink-soft">
+            <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
           </p>
         </div>
       </section>
 
-      {services.map(({ id, icon: Icon, title, tagline, body, items, price, footer, primary, highlight }) => (
-        <section
-          key={id}
-          id={id}
-          className={`py-16 border-t border-border ${primary ? "bg-surface" : ""}`}
-        >
-          <div className="container-site grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-5">
-              <div className="w-14 h-14 rounded-xl bg-coral/10 text-coral flex items-center justify-center mb-6">
-                <Icon size={26} />
+      {/* ARCHITECTURE FLAGSHIP CARD */}
+      <section className="pb-8">
+        <div className="container-site max-w-5xl">
+          <div className="p-10 border-2 border-coral rounded-2xl bg-surface">
+            <div className="flex items-start gap-6 mb-6 flex-wrap">
+              <div className="w-14 h-14 rounded-xl bg-coral/10 text-coral flex items-center justify-center shrink-0">
+                <Sparkles size={26} />
               </div>
-              {primary && <p className="eyebrow mb-3">Flagship engagement</p>}
-              <h2 className="font-serif mb-4">{title}</h2>
-              <p className="text-xl text-ink-soft">{tagline}</p>
-              {price && (
-                <p className="mt-4 font-serif text-2xl text-foreground">{price}</p>
-              )}
-              {footer && (
-                <Link href={footer.href} className="link-arrow mt-6 inline-flex">
-                  {footer.label} <ArrowRight size={16} />
-                </Link>
-              )}
+              <div className="flex-1 min-w-0">
+                <p className="eyebrow mb-2">Flagship program</p>
+                <h2 className="font-serif mb-3">The FAMILY Framework Architecture</h2>
+                <p className="text-lg text-ink-soft">
+                  A complete transformation system: the master framework, a 21-tab
+                  Excel working system, a bound Client Workbook (539 pages), the
+                  Advisor Companion, and a consultant walking the program with you
+                  week by week for two and a quarter years.
+                </p>
+              </div>
             </div>
-            <div className="lg:col-span-7">
-              <p className="text-lg mb-8">{body}</p>
-              <ul className="space-y-3">
-                {items.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <Check size={20} className="text-coral shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              {highlight && (
-                <div className="mt-8 flex gap-3 p-5 border border-gold rounded-xl bg-cream-deep">
-                  <Shield size={22} className="text-gold-deep shrink-0 mt-1" />
-                  <p className="text-ink-soft">{highlight}</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-      ))}
 
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <div>
+                <p className="eyebrow mb-3">Structure</p>
+                <ul className="space-y-2 text-ink-soft">
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>117 weeks across six modules</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Weekly 60-minute consulting sessions</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Structured between-session work</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Bound companion books for both sides</span></li>
+                </ul>
+              </div>
+              <div>
+                <p className="eyebrow mb-3">Fit</p>
+                <ul className="space-y-2 text-ink-soft">
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Businesses of 5–250 people, $1M–$250M</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Owner with authority to commit two years</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Willing to do measurement and accountability</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Wants a transformation that holds, not a quick fix</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-border flex flex-wrap gap-4">
+              <Link href="/architecture" className="btn-primary">
+                See the full program <ArrowRight size={18} />
+              </Link>
+              <Link href="/readiness" className="btn-outline">
+                Take the Readiness Assessment
+              </Link>
+            </div>
+
+            <p className="mt-6 text-sm text-muted">
+              Pricing is scoped in the discovery conversation. The assessment tells
+              you in fifteen minutes whether the program fits your situation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FOUR PRACTICE AREAS */}
+      <section className="py-16">
+        <div className="container-site max-w-5xl">
+          <div className="mb-12 max-w-2xl">
+            <p className="eyebrow mb-4">Practice areas</p>
+            <h2 className="font-serif mb-4">Four contexts where the work lives.</h2>
+            <p className="text-lg">
+              The Architecture is the primary vehicle. The practice areas below
+              describe the specific contexts where it applies — and where shorter,
+              scoped engagements also make sense when the situation calls for them.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {practiceAreas.map(({ id, icon: Icon, title, body, highlights }) => (
+              <div key={id} id={id} className="p-8 border border-border rounded-2xl bg-surface">
+                <div className="w-12 h-12 rounded-xl bg-coral/10 text-coral flex items-center justify-center mb-6">
+                  <Icon size={22} />
+                </div>
+                <h3 className="font-serif mb-3">{title}</h3>
+                <p className="text-ink-soft mb-6">{body}</p>
+                <ul className="space-y-2">
+                  {highlights.map((h) => (
+                    <li key={h} className="flex gap-3 text-sm">
+                      <Check size={16} className="text-coral shrink-0 mt-1" />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
       <section className="py-24 bg-foreground text-white">
         <div className="container-site max-w-3xl text-center">
           <h2 className="font-serif mb-6 text-white">Not sure which fits?</h2>
           <p className="text-xl mb-8 text-white/80">
-            Start with the diagnostic — it&apos;ll tell you where the real work is.
-            Then book a call and we&apos;ll scope the right shape together.
+            Start with the 10-minute diagnostic for a read on where the business
+            stands, or take the Readiness Assessment to see whether the full
+            Architecture program is a fit. Either way, the discovery conversation
+            is where we scope the right engagement together.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/diagnostic" className="btn-primary !bg-gold !text-foreground hover:!bg-gold-deep">
-              Take the 10-min diagnostic <ArrowRight size={18} />
+            <Link href="/readiness" className="btn-primary !bg-gold !text-foreground hover:!bg-gold-deep">
+              Readiness Assessment <ArrowRight size={18} />
             </Link>
             <Link href="/contact" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-foreground">
-              Schedule a consult
+              Schedule a discovery conversation
             </Link>
           </div>
         </div>
