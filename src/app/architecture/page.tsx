@@ -67,31 +67,31 @@ const modules = [
 const deliverables = [
   {
     icon: FileSpreadsheet,
-    title: "The FAMILY Framework Architecture (Excel)",
+    title: "The FAMILY Framework Architecture",
     sub: "Your Working System",
     body:
-      "A 21-tab Excel workbook tailored to your business size — Small Business, Mid-Market, or Enterprise-Lite. Business Diagnostic. Financial Baseline & Targets calculator. Leadership Self-Assessment. Vision & 3-Year Picture. Customer Experience Journey Map. Six module workspaces. KPI Scoreboard. 90-Day Plan, Meeting Rhythm, Hiring Scorecard, Accountability Log, Milestones tracker, and Glossary. Live formulas, structured for weekly use.",
+      "A working system tailored to your business size. Diagnostics, financial baselines, KPIs, and weekly plans — all in one place, built for weekly use.",
   },
   {
     icon: BookOpen,
-    title: "The Client Workbook (bound, 539 pages)",
+    title: "The Client Workbook",
     sub: "Your Companion for Two Years",
     body:
-      "A keepsake-quality bound book with a four-page chapter for each of the 117 weeks. Teaching, real case studies, exercises, and reflection space designed for working in your own handwriting. Six modules, hybrid layouts that shift with the work — discovery, execution, strategic thinking, operational rigor, transition, and legacy. Built to live on your desk for 27 months.",
+      "A keepsake-quality bound book with one chapter for every week of the program. Teaching, exercises, and reflection space — designed for working in your own handwriting.",
   },
   {
     icon: BookOpen,
-    title: "The Advisor Companion (bound, 489 pages)",
+    title: "The Advisor Companion",
     sub: "Used by Your Consultant",
     body:
-      "A facilitation guide your consultant carries through the program. Coaching intent, session scripts, common pitfalls, and debrief prompts for every weekly session. Ensures consistency and depth across all 117 weeks.",
+      "A facilitation guide your consultant carries through every session. Ensures consistency and depth across all 117 weeks.",
   },
   {
     icon: MessagesSquare,
     title: "Weekly Consulting Sessions",
     sub: "The Heartbeat",
     body:
-      "60-minute video or in-person sessions every week, with milestone sessions extended to 75–90 minutes at the close of each module. Plus the structured between-session work that the program is designed around.",
+      "60-minute sessions every week, extended at the close of each module. Structured between-session work keeps the program moving.",
   },
 ];
 
