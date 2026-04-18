@@ -316,7 +316,7 @@ function ResultsScreen({ answers, onRetake }: { answers: Answers; onRetake: () =
               <p className="mb-6 text-ink-soft flex-1">
                 This diagnostic scored your <em>business</em>. The Readiness Assessment
                 scores <em>you</em> — your bandwidth, authority, and readiness to commit
-                to the 117-week Architecture program. Fifteen questions. Fifteen minutes.
+                to the Architecture program. Fifteen questions. Fifteen minutes.
                 A clear band: Strong Fit, Likely Fit, Not Yet, or Different Program.
               </p>
               <Link href="/readiness" className="btn-outline w-full sm:w-auto">

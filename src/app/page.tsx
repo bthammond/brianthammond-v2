@@ -24,15 +24,15 @@ const designSteps = [
 const faqs = [
   {
     q: "What is the FAMILY Framework Architecture?",
-    a: "A 117-week, two-year transformation program for business owners ready to move from working in the business to working on it. Six modules. Weekly consulting sessions. A 21-tab Excel working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
+    a: "A structured, multi-module transformation program for business owners ready to move from working in the business to working on it. Six modules. Weekly consulting sessions. A working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
   },
   {
     q: "Who is this program for?",
-    a: "Owners or co-owners of businesses with 5 to 250 people and $1M to $250M in annual revenue. Family enterprises, founder-led businesses, and established mid-market companies. The common thread is willingness to commit two years to structural work — not a quick fix.",
+    a: "Owners or co-owners of businesses with 5 to 250 people and $1M to $250M in annual revenue. Family enterprises, founder-led businesses, and established mid-market companies. The common thread is willingness to commit to structural work — not a quick fix.",
   },
   {
     q: "How is this different from hiring a business coach or a consulting firm?",
-    a: "A coach works on you. A consulting firm does the work for you for a quarter and hands it back. The Architecture program does neither. It's a structured, week-by-week practice you build into the business, with a consultant walking the discipline alongside you for two years. The goal is a business that runs on structure, not on presence.",
+    a: "A coach works on you. A consulting firm does the work for you for a quarter and hands it back. The Architecture program does neither. It's a structured, week-by-week practice you build into the business, with a consultant walking the discipline alongside you through the program. The goal is a business that runs on structure, not on presence.",
   },
   {
     q: "How much does the program cost?",
@@ -73,7 +73,7 @@ export default function Home() {
               I help business owners — family enterprises, founders, and
               established mid-market companies — do the long structural work of
               moving from working <em>in</em> the business to working <em>on</em> it.
-              A 117-week program. Two frameworks. One transformation.
+              A structured program. Two frameworks. One transformation.
             </p>
             <p className="text-lg text-ink-soft mb-8">
               <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
@@ -104,8 +104,8 @@ export default function Home() {
                 <p className="font-serif text-lg mt-1">MBA, LSU</p>
               </div>
               <div className="absolute -top-6 -right-6 bg-gold text-foreground rounded-2xl p-4 shadow-lg hidden md:block">
-                <p className="text-xs uppercase tracking-widest font-bold">Program</p>
-                <p className="font-serif text-lg mt-1">117 weeks</p>
+                <p className="text-xs uppercase tracking-widest font-bold">Experience</p>
+                <p className="font-serif text-lg mt-1">30+ years</p>
               </div>
             </div>
           </div>
@@ -202,13 +202,13 @@ export default function Home() {
           <div className="max-w-3xl mb-10">
             <p className="eyebrow mb-4">The Architecture</p>
             <h2 className="font-serif mb-6">
-              117 weeks. Six modules. One transformation.
+              Six modules. One transformation.
             </h2>
             <p className="text-xl">
               The Architecture is the signature program where the two frameworks
-              meet your business. Weekly consulting sessions. A 21-tab Excel
-              working system. Bound companion books. Two and a quarter years of
-              structured, disciplined work.
+              meet your business. Weekly consulting sessions. A working system.
+              Bound companion books. Structured, disciplined work — week by week,
+              module by module.
             </p>
           </div>
 
@@ -248,12 +248,12 @@ export default function Home() {
               {
                 stat: "6 + 6",
                 label: "Two frameworks, not one",
-                body: "FAMILY names the six domains we build. DESIGN names the six steps we use. The content and the discipline, held together, across 117 weeks.",
+                body: "FAMILY names the six domains we build. DESIGN names the six steps we use. The content and the discipline, held together, across every phase of the program.",
               },
               {
-                stat: "117 wks",
+                stat: "Weekly",
                 label: "A program, not a sprint",
-                body: "A committed two-year engagement with weekly sessions, structured work, and bound companion books. Built for transformation that holds.",
+                body: "A committed cadence of weekly sessions, structured work, and bound companion books. Built for transformation that holds, not a quick fix that fades.",
               },
             ].map(({ stat, label, body }) => (
               <div key={label} className="p-8 border border-border rounded-2xl bg-surface">
@@ -295,7 +295,7 @@ export default function Home() {
                   "Owner or co-owner with authority over major decisions",
                   "Built through hard work; the model has reached its limits",
                   "Ready to work on the business, not just in it",
-                  "Willing to commit two years to real structural work",
+                  "Willing to commit to real structural work",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <Check size={18} className="text-coral shrink-0 mt-1" />
@@ -321,7 +321,7 @@ export default function Home() {
               {
                 icon: Sparkles,
                 title: "The Architecture",
-                body: "The 117-week flagship transformation program. Weekly sessions, bound companions, a 21-tab working system.",
+                body: "The structured flagship transformation program. Weekly sessions, bound companions, a 21-tab working system.",
                 href: "/architecture",
                 primary: true,
               },

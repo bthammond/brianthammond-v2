@@ -46,7 +46,7 @@ export default function WhoIHelp() {
                     "$1M to $250M in annual revenue",
                     "Owner or co-owner with authority over major decisions",
                     "Built through hard work and personal effort; model has reached its limits",
-                    "Willing to commit two years to structural work",
+                    "Willing to commit to structural work",
                   ].map((item) => (
                     <li key={item} className="flex gap-3">
                       <Check size={18} className="text-coral shrink-0 mt-1" />

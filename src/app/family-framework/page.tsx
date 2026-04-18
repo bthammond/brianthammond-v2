@@ -70,7 +70,7 @@ export default function FamilyFramework() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/architecture" className="btn-primary">
-              See the 117-week Architecture program <ArrowRight size={18} />
+              See the Architecture program <ArrowRight size={18} />
             </Link>
             <Link href="/diagnostic" className="btn-outline">
               Take the 10-minute diagnostic
@@ -173,7 +173,7 @@ export default function FamilyFramework() {
               <p>
                 The exercises, diagnostics, and specific tools inside each domain are
                 proprietary and reserved for client engagements — delivered through
-                the 117-week Architecture program with a bound Client Workbook, a
+                the Architecture program with a bound Client Workbook, a
                 21-tab Excel working system, and weekly consulting sessions. What you
                 see on this page is the shape, not the playbook.
               </p>
@@ -187,7 +187,7 @@ export default function FamilyFramework() {
         <div className="container-site max-w-3xl text-center">
           <h2 className="font-serif mb-6 text-white">Ready to put FAMILY to work?</h2>
           <p className="text-xl mb-8 text-white/80">
-            The Architecture is the 117-week program where FAMILY and the DESIGN
+            The Architecture is the structured program where FAMILY and the DESIGN
             Method meet your business. Start with the Readiness Assessment to see if
             it&apos;s the right next step for you.
           </p>

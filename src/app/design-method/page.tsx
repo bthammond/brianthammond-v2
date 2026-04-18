@@ -56,7 +56,7 @@ export default function DesignMethodPage() {
             A six-step discipline for any strategic question.
           </h1>
           <p className="text-xl mb-6">
-            FAMILY is the content we build — six domains, six years of work,
+            FAMILY is the content we build — six domains of structural work,
             one durable business. The DESIGN Method is the discipline we apply to
             every strategic question along the way. Six steps. Used every quarter,
             every priority, every hard decision — during the program and for
@@ -149,8 +149,8 @@ export default function DesignMethodPage() {
             The Architecture is where FAMILY and DESIGN meet.
           </h2>
           <p className="text-xl mb-8">
-            117 weeks of structured work, six modules, the two frameworks applied
-            week by week to your business.
+            Structured, disciplined work across six modules — the two frameworks
+            applied week by week to your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/architecture" className="btn-primary">

@@ -2,24 +2,20 @@ import Link from "next/link";
 import { ArrowRight, Check, BookOpen, Calendar, FileSpreadsheet, MessagesSquare } from "lucide-react";
 
 export const metadata = {
-  title: "The FAMILY Framework Architecture — A 117-Week Program",
+  title: "The FAMILY Framework Architecture",
   description:
-    "The signature transformation program for business owners ready to work on the business. 117 weeks across six modules. Weekly sessions. Working tools. Bound companion books. FAMILY is what we build; DESIGN is how we build it.",
+    "The signature transformation program for business owners ready to work on the business. Six modules. Weekly sessions. Working tools. Bound companion books. FAMILY is what we build; DESIGN is how we build it.",
 };
 
 const modules = [
   {
-    qtr: "Q1",
-    weeks: "Wks 1–13",
     id: "M1",
     letter: "F",
     title: "Foundations & Values",
     designStep: "Discover",
-    milestones: "90-day diagnostic complete · Weekly Revenue Target locked · Values written",
+    milestones: "Financial baseline complete · Weekly Revenue Target locked · Values written",
   },
   {
-    qtr: "Q2–Q3",
-    weeks: "Wks 14–39",
     id: "M2",
     letter: "A + M",
     title: "Alignment & Management",
@@ -27,8 +23,6 @@ const modules = [
     milestones: "Revenue engine installed · Comp aligned · Marketing calendar live",
   },
   {
-    qtr: "Q4",
-    weeks: "Wks 40–52",
     id: "M3",
     letter: "I",
     title: "Innovation & Integration",
@@ -36,8 +30,6 @@ const modules = [
     milestones: "3-year vision published · Strategic priorities cascaded · Pilot designed",
   },
   {
-    qtr: "Q5–Q6",
-    weeks: "Wks 53–78",
     id: "M4",
     letter: "L",
     title: "Team & Operations",
@@ -45,8 +37,6 @@ const modules = [
     milestones: "Org chart built · SOPs operating · CX journey mapped · Reviews active",
   },
   {
-    qtr: "Q7–Q8",
-    weeks: "Wks 79–104",
     id: "M5",
     letter: "L",
     title: "Leadership Transition",
@@ -54,8 +44,6 @@ const modules = [
     milestones: "Integrator named & trained · Handoff complete · Owner-as-CEO rhythm",
   },
   {
-    qtr: "Q9",
-    weeks: "Wks 105–117",
     id: "M6",
     letter: "Y",
     title: "Yield & Feedback",
@@ -75,7 +63,7 @@ const deliverables = [
   {
     icon: BookOpen,
     title: "The Client Workbook",
-    sub: "Your Companion for Two Years",
+    sub: "Your Weekly Companion",
     body:
       "A keepsake-quality bound book with one chapter for every week of the program. Teaching, exercises, and reflection space — designed for working in your own handwriting.",
   },
@@ -84,7 +72,7 @@ const deliverables = [
     title: "The Advisor Companion",
     sub: "Used by Your Consultant",
     body:
-      "A facilitation guide your consultant carries through every session. Ensures consistency and depth across all 117 weeks.",
+      "A facilitation guide your consultant carries through every session. Ensures consistency and depth across every phase of the program.",
   },
   {
     icon: MessagesSquare,
@@ -97,8 +85,8 @@ const deliverables = [
 
 const milestones = [
   {
-    week: "By Week 13",
-    subtitle: "End of the 90-Day Initial Engagement",
+    week: "Module 1",
+    subtitle: "Foundations & Values",
     items: [
       "Complete financial baseline and Weekly Revenue Target locked",
       "Written core values the team can recite from memory",
@@ -107,8 +95,8 @@ const milestones = [
     ],
   },
   {
-    week: "By Week 39",
-    subtitle: "End of Module 2",
+    week: "Module 2",
+    subtitle: "Alignment & Management",
     items: [
       "Weekly leadership meeting rhythm operating at a self-improving cadence",
       "Sales process and pipeline scoreboard live across all client-facing leads",
@@ -118,8 +106,8 @@ const milestones = [
     ],
   },
   {
-    week: "By Week 52",
-    subtitle: "End of Module 3",
+    week: "Module 3",
+    subtitle: "Innovation & Integration",
     items: [
       "3-year vision drafted, refined, and cascaded to leadership",
       "Three to five strategic priorities named with owners and metrics",
@@ -127,8 +115,8 @@ const milestones = [
     ],
   },
   {
-    week: "By Week 78",
-    subtitle: "End of Module 4",
+    week: "Module 4",
+    subtitle: "Team & Operations",
     items: [
       "Org chart, hiring system, and role scorecards in place for every key role",
       "Standard operating procedures documented, trained, and validated",
@@ -137,8 +125,8 @@ const milestones = [
     ],
   },
   {
-    week: "By Week 104",
-    subtitle: "End of Module 5",
+    week: "Module 5",
+    subtitle: "Leadership Transition",
     items: [
       "Integrator (general manager / COO) selected, trained, and in seat",
       "Owner out of daily operations; CEO operating rhythm in place",
@@ -146,8 +134,8 @@ const milestones = [
     ],
   },
   {
-    week: "By Week 117",
-    subtitle: "Graduation",
+    week: "Module 6",
+    subtitle: "Yield & Feedback — Graduation",
     items: [
       "Stakeholder feedback loops live (clients, team, advisors, family where applicable)",
       "Continuity plan documented and accessible",
@@ -161,7 +149,7 @@ const fitYes = [
   "You own or co-own a business with a team you depend on — typically 5 to 250 people, $1M to $250M in revenue",
   "You’ve built it through hard work and personal effort, and can feel that the model has reached its limits",
   "You want to spend less time in daily operations and more on strategic, relational, and personal work",
-  "You’re willing to commit two years and be honest about what the business actually is",
+  "You’re willing to commit to the structured work and be honest about what the business actually is",
   "You want a transformation that holds, not a quick fix that fades",
 ];
 
@@ -180,14 +168,13 @@ export default function ArchitecturePage() {
         <div className="container-site max-w-4xl">
           <p className="eyebrow mb-4">The Architecture · A program overview</p>
           <h1 className="font-serif mb-6">
-            117 weeks. Six modules. One transformation.
+            Six modules. One transformation.
           </h1>
           <p className="text-xl mb-6">
             The FAMILY Framework Architecture is the signature transformation program
             for owners ready to work <em>on</em> the business. A complete system — the
             master framework, the working tools, the bound companion books, and a
-            consultant who walks the program with you week by week for two and a
-            quarter years.
+            consultant who walks the program with you week by week through every phase.
           </p>
           <p className="text-lg text-ink-soft mb-8">
             <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
@@ -243,7 +230,7 @@ export default function ArchitecturePage() {
             <p className="text-lg">
               A complete transformation system built around a weekly cadence —
               structured tools, bound companion books, and a consultant walking the
-              program with you for two and a quarter years.
+              program with you for through every phase.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -265,14 +252,14 @@ export default function ArchitecturePage() {
               <div className="text-center">
                 <p className="eyebrow mb-2">Investment</p>
                 <p className="font-serif text-5xl text-coral leading-none">$1,964</p>
-                <p className="mt-2 text-sm text-ink-soft">per month · 27 months</p>
+                <p className="mt-2 text-sm text-ink-soft">per month</p>
               </div>
               <div>
                 <p className="text-lg">
-                  A committed two-year program with weekly consulting, bound
-                  companion books, and the 21-tab Excel working system. Total
-                  program investment is scoped in the discovery conversation
-                  based on business size and complexity. The{" "}
+                  A committed program with weekly consulting, bound companion
+                  books, and the working system. Total program investment is
+                  scoped in the discovery conversation based on business size
+                  and complexity. The{" "}
                   <Link href="/readiness" className="link-arrow inline-flex">Readiness Assessment</Link>{" "}
                   tells you in fifteen minutes whether the program fits your
                   situation — before any pricing conversation.
@@ -287,8 +274,8 @@ export default function ArchitecturePage() {
       <section className="py-20 bg-surface border-y border-border">
         <div className="container-site max-w-6xl">
           <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-4">Your year at a glance</p>
-            <h2 className="font-serif mb-4">Six modules across 117 weeks.</h2>
+            <p className="eyebrow mb-4">Your program at a glance</p>
+            <h2 className="font-serif mb-4">Six modules. One arc.</h2>
             <p className="text-lg">
               Anchored to the FAMILY Framework and powered by the DESIGN Method.
               Milestones at the close of every module.
@@ -299,9 +286,8 @@ export default function ArchitecturePage() {
             <table className="w-full border-collapse bg-background">
               <thead>
                 <tr className="bg-foreground text-white">
-                  <th className="text-left px-4 py-4 font-serif text-sm uppercase tracking-widest">Qtr</th>
-                  <th className="text-left px-4 py-4 font-serif text-sm uppercase tracking-widest">Weeks</th>
                   <th className="text-left px-4 py-4 font-serif text-sm uppercase tracking-widest">Module</th>
+                  <th className="text-left px-4 py-4 font-serif text-sm uppercase tracking-widest">Focus</th>
                   <th className="text-left px-4 py-4 font-serif text-sm uppercase tracking-widest">DESIGN step</th>
                   <th className="text-left px-4 py-4 font-serif text-sm uppercase tracking-widest">Milestones</th>
                 </tr>
@@ -309,10 +295,9 @@ export default function ArchitecturePage() {
               <tbody>
                 {modules.map((m) => (
                   <tr key={m.id} className="border-b border-border align-top">
-                    <td className="px-4 py-5 font-semibold">{m.qtr}</td>
-                    <td className="px-4 py-5 font-mono text-sm whitespace-nowrap">{m.weeks}</td>
+                    <td className="px-4 py-5 font-semibold whitespace-nowrap">{m.id}</td>
                     <td className="px-4 py-5">
-                      <div className="font-serif font-semibold">{m.id} · {m.letter} · {m.title}</div>
+                      <div className="font-serif font-semibold">{m.letter} · {m.title}</div>
                     </td>
                     <td className="px-4 py-5 text-ink-soft text-sm">{m.designStep}</td>
                     <td className="px-4 py-5 text-ink-soft text-sm">{m.milestones}</td>
@@ -324,7 +309,7 @@ export default function ArchitecturePage() {
 
           <div className="mt-8 p-6 border-l-4 border-gold bg-cream-deep rounded-r-xl">
             <p className="font-serif text-xl">
-              Six modules. 117 weeks. Six letters. Six steps. One transformation.
+              Six modules. Six letters. Six steps. One transformation.
             </p>
           </div>
         </div>
@@ -402,7 +387,7 @@ export default function ArchitecturePage() {
               {
                 n: "04",
                 title: "The Kickoff",
-                body: "Engagement letter signed, weekly cadence locked, calendar set. Week 1 begins. The Discover step of the DESIGN Method begins. The 117-week Architecture begins.",
+                body: "Engagement letter signed, weekly cadence locked, calendar set. Week 1 begins. The Discover step of the DESIGN Method begins. The Architecture begins.",
               },
             ].map(({ n, title, body, cta }) => (
               <div key={n} className="p-8 border border-border rounded-2xl bg-background">

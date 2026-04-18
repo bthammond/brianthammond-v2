@@ -55,7 +55,7 @@ function IntroScreen({ onStart }: { onStart: () => void }) {
           Fifteen questions. Fifteen minutes. A clear read on fit.
         </h1>
         <p className="text-xl mb-8">
-          The FAMILY Framework Architecture is a 117-week, two-year program for
+          The FAMILY Framework Architecture is a structured, structured program for
           owners ready to work on the business. This assessment tells you whether
           it&apos;s the right program for where you are today. It&apos;s not about
           the business — it&apos;s about <em>you</em>: your bandwidth, your

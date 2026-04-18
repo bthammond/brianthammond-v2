@@ -11,7 +11,7 @@ export const READINESS_SCALE = [
 export const READINESS_QUESTIONS = [
   {
     id: 1,
-    text: "I am willing to commit to a weekly consulting session for at least the next 90 days, and intend to honor that cadence for two years.",
+    text: "I am willing to commit to a weekly consulting session for at least the next 90 days, and intend to honor that cadence through the program.",
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ export const READINESS_QUESTIONS = [
   },
   {
     id: 14,
-    text: "I have the financial bandwidth to sustain a two-year consulting investment.",
+    text: "I have the financial bandwidth to sustain a multi-phase consulting investment.",
   },
   {
     id: 15,

@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, MessagesSquare, Home, Rocket, Calculator, Check }
 export const metadata = {
   title: "How I help — The Architecture Program and Four Practice Areas",
   description:
-    "The FAMILY Framework Architecture is the flagship 117-week program. Practice areas: Consulting & Coaching, Family Enterprise, Entrepreneur Strategy, and Financial Analysis.",
+    "The FAMILY Framework Architecture is the flagship structured program. Practice areas: Consulting & Coaching, Family Enterprise, Entrepreneur Strategy, and Financial Analysis.",
 };
 
 const practiceAreas = [
@@ -65,7 +65,7 @@ export default function HowIHelp() {
             One flagship program. Four practice areas.
           </h1>
           <p className="text-xl mb-6">
-            Most of the work I do sits inside the Architecture — a 117-week
+            Most of the work I do sits inside the Architecture — a structured
             transformation program for owners ready to work on the business. The
             four practice areas below describe the contexts where that work lives.
           </p>
@@ -87,10 +87,9 @@ export default function HowIHelp() {
                 <p className="eyebrow mb-2">Flagship program</p>
                 <h2 className="font-serif mb-3">The FAMILY Framework Architecture</h2>
                 <p className="text-lg text-ink-soft">
-                  A complete transformation system: the master framework, a 21-tab
-                  Excel working system, a bound Client Workbook (539 pages), the
-                  Advisor Companion, and a consultant walking the program with you
-                  week by week for two and a quarter years.
+                  A complete transformation system: the master framework, a working
+                  system, bound companion books, and a consultant walking the program
+                  with you week by week through every phase.
                 </p>
               </div>
             </div>
@@ -99,7 +98,7 @@ export default function HowIHelp() {
               <div>
                 <p className="eyebrow mb-3">Structure</p>
                 <ul className="space-y-2 text-ink-soft">
-                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>117 weeks across six modules</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Six modules across the full arc of the program</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Weekly 60-minute consulting sessions</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Structured between-session work</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Bound companion books for both sides</span></li>
@@ -109,7 +108,7 @@ export default function HowIHelp() {
                 <p className="eyebrow mb-3">Fit</p>
                 <ul className="space-y-2 text-ink-soft">
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Businesses of 5–250 people, $1M–$250M</span></li>
-                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Owner with authority to commit two years</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Owner with authority to commit to the program</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Willing to do measurement and accountability</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Wants a transformation that holds, not a quick fix</span></li>
                 </ul>
@@ -118,7 +117,7 @@ export default function HowIHelp() {
 
             <div className="mt-8 pt-8 border-t border-border">
               <p className="eyebrow mb-2">Investment</p>
-              <p className="font-serif text-2xl">$1,964 / month · 27 months</p>
+              <p className="font-serif text-2xl">$1,964 / month</p>
               <p className="text-sm text-muted mt-2">
                 Total program investment is scoped in the discovery conversation
                 based on business size and complexity. The Readiness Assessment
