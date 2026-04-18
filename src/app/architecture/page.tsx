@@ -4,7 +4,7 @@ import { ArrowRight, Check, BookOpen, Calendar, FileSpreadsheet, MessagesSquare 
 export const metadata = {
   title: "The FAMILY Framework Architecture",
   description:
-    "The signature transformation program for business owners ready to work on the business. Six modules. Weekly sessions. Working tools. Bound companion books. FAMILY is what we build; DESIGN is how we build it.",
+    "The signature transformation program for business owners ready to work on the business. Six modules. Monthly sessions. Working tools. Bound companion books. FAMILY is what we build; DESIGN is how we build it.",
 };
 
 const modules = [
@@ -13,7 +13,7 @@ const modules = [
     letter: "F",
     title: "Foundations & Values",
     designStep: "Discover",
-    milestones: "Financial baseline complete · Weekly Revenue Target locked · Values written",
+    milestones: "Financial baseline complete · Monthly Revenue Target locked · Values written",
   },
   {
     id: "M2",
@@ -58,14 +58,14 @@ const deliverables = [
     title: "The FAMILY Framework Architecture",
     sub: "Your Working System",
     body:
-      "A working system tailored to your business size. Diagnostics, financial baselines, KPIs, and weekly plans — all in one place, built for weekly use.",
+      "A working system tailored to your business size. Diagnostics, financial baselines, KPIs, and monthly plans — all in one place, built for monthly use.",
   },
   {
     icon: BookOpen,
     title: "The Client Workbook",
-    sub: "Your Weekly Companion",
+    sub: "Your Monthly Companion",
     body:
-      "A keepsake-quality bound book with one chapter for every week of the program. Teaching, exercises, and reflection space — designed for working in your own handwriting.",
+      "A keepsake-quality bound book with one chapter for every month of the program. Teaching, exercises, and reflection space — designed for working in your own handwriting.",
   },
   {
     icon: BookOpen,
@@ -76,10 +76,10 @@ const deliverables = [
   },
   {
     icon: MessagesSquare,
-    title: "Weekly Sessions",
+    title: "Monthly Sessions",
     sub: "The Heartbeat",
     body:
-      "60-minute sessions every week, extended at the close of each module. Structured between-session work keeps the program moving.",
+      "60-minute sessions every month, extended at the close of each module. Structured between-session work keeps the program moving.",
   },
 ];
 
@@ -88,7 +88,7 @@ const milestones = [
     week: "Module 1",
     subtitle: "Foundations & Values",
     items: [
-      "Complete financial baseline and Weekly Revenue Target locked",
+      "Complete financial baseline and Monthly Revenue Target locked",
       "Written core values the team can recite from memory",
       "Two to three measurable quick wins quantified",
       "First 90-day ROI documented",
@@ -98,7 +98,7 @@ const milestones = [
     week: "Module 2",
     subtitle: "Alignment & Management",
     items: [
-      "Weekly leadership meeting rhythm operating at a self-improving cadence",
+      "Monthly leadership meeting rhythm operating at a self-improving cadence",
       "Sales process and pipeline scoreboard live across all client-facing leads",
       "Marketing calendar producing measurable inquiry flow",
       "Aligned compensation plans rolled out and stabilizing",
@@ -155,7 +155,7 @@ const fitYes = [
 
 const fitNo = [
   "You want a turnaround consultant to run your business for 90 days and hand it back",
-  "You’re looking for a course you can complete on your own time without a weekly cadence",
+  "You’re looking for a course you can complete on your own time without a monthly cadence",
   "You’re not yet ready to invest in measurement, accountability, and uncomfortable conversations",
   "You want growth without the structural work that sustains it",
 ];
@@ -174,7 +174,7 @@ export default function ArchitecturePage() {
             The FAMILY Framework Architecture is the signature transformation program
             for owners ready to work <em>on</em> the business. A complete system — the
             master framework, the working tools, the bound companion books, and a
-            consultant who walks the program with you week by week through every phase.
+            consultant who walks the program with you month by month through every phase.
           </p>
           <p className="font-serif text-2xl mb-2">FAMILY by <span className="text-coral">DESIGN</span>.</p>
           <p className="text-sm text-ink-soft mb-8">
@@ -229,7 +229,7 @@ export default function ArchitecturePage() {
             <p className="eyebrow mb-4">What you get</p>
             <h2 className="font-serif mb-4">Four deliverables. One integrated system.</h2>
             <p className="text-lg">
-              A complete transformation system built around a weekly cadence —
+              A complete transformation system built around a monthly cadence —
               structured tools, bound companion books, and a consultant walking the
               program with you for through every phase.
             </p>
@@ -257,7 +257,7 @@ export default function ArchitecturePage() {
               </div>
               <div>
                 <p className="text-lg">
-                  A committed program with weekly sessions, bound companion
+                  A committed program with monthly sessions, bound companion
                   books, and the working system. Total program investment is
                   scoped in the discovery conversation based on business size
                   and complexity. The{" "}
@@ -388,7 +388,7 @@ export default function ArchitecturePage() {
               {
                 n: "04",
                 title: "The Kickoff",
-                body: "Engagement letter signed, weekly cadence locked, calendar set. Week 1 begins. The Discover step of the DESIGN Method begins. The Architecture begins.",
+                body: "Engagement letter signed, monthly cadence locked, calendar set. Week 1 begins. The Discover step of the DESIGN Method begins. The Architecture begins.",
               },
             ].map(({ n, title, body, cta }) => (
               <div key={n} className="p-8 border border-border rounded-2xl bg-background">

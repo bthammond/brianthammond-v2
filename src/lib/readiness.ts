@@ -11,7 +11,7 @@ export const READINESS_SCALE = [
 export const READINESS_QUESTIONS = [
   {
     id: 1,
-    text: "I am willing to commit to a weekly session for at least the next 90 days, and intend to honor that cadence through the program.",
+    text: "I am willing to commit to a monthly session for at least the next 90 days, and intend to honor that cadence through the program.",
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const READINESS_QUESTIONS = [
   },
   {
     id: 9,
-    text: "I have at least 5 hours per week to dedicate to this program (1 hour with consultant, 4 hours of between-session work).",
+    text: "I have at least 5 hours per month to dedicate to this program (1 hour with consultant, 4 hours of between-session work).",
   },
   {
     id: 10,
@@ -59,7 +59,7 @@ export const READINESS_QUESTIONS = [
   },
   {
     id: 13,
-    text: "I am willing to publish a Weekly Revenue Target to my leadership team and review it every week.",
+    text: "I am willing to publish a Monthly Revenue Target to my leadership team and review it every month.",
   },
   {
     id: 14,

@@ -139,7 +139,7 @@ export default function WhoIHelp() {
           <ul className="space-y-3">
             {[
               "You want a turnaround consultant who runs your business for 90 days and hands it back",
-              "You’re looking for a course you can complete on your own time without a weekly cadence",
+              "You’re looking for a course you can complete on your own time without a monthly cadence",
               "You’re not yet ready to invest in measurement, accountability, and uncomfortable conversations",
               "You want growth without the structural work that sustains it",
             ].map((item) => (

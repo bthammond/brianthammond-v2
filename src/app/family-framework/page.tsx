@@ -44,7 +44,7 @@ const domains = [
 const outcomes = [
   "A succession or transition plan the next generation is genuinely ready for — not just a signed document",
   "Governance that separates family or ownership dynamics from business decisions",
-  "KPIs and an operating rhythm that make accountability visible every week",
+  "KPIs and an operating rhythm that make accountability visible every month",
   "Systems and people capable of running the business without you in it every day",
 ];
 
@@ -175,7 +175,7 @@ export default function FamilyFramework() {
                 The exercises, diagnostics, and specific tools inside each domain are
                 proprietary and reserved for client engagements — delivered through
                 the Architecture program with a bound Client Workbook, a
-                21-tab Excel working system, and weekly sessions. What you
+                21-tab Excel working system, and monthly sessions. What you
                 see on this page is the shape, not the playbook.
               </p>
             </div>

@@ -30,7 +30,7 @@ const steps = [
     letter: "I",
     word: "Implement",
     tag: "The disciplined daily work",
-    body: "Execution beats planning, every time. Weekly cadence. Named owners. Metrics visible. Priorities on the board, reviewed in the room, moved forward every week.",
+    body: "Execution beats planning, every time. Monthly cadence. Named owners. Metrics visible. Priorities on the board, reviewed in the room, moved forward every month.",
   },
   {
     letter: "G",
@@ -151,7 +151,7 @@ export default function DesignMethodPage() {
           </h2>
           <p className="text-xl mb-8">
             Structured, disciplined work across six modules — the two frameworks
-            applied week by week to your business.
+            applied month by month to your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/architecture" className="btn-primary">

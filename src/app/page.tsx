@@ -24,7 +24,7 @@ const designSteps = [
 const faqs = [
   {
     q: "What is the FAMILY Framework Architecture?",
-    a: "A structured, multi-module transformation program for business owners ready to move from working in the business to working on it. Six modules. Weekly sessions. A working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
+    a: "A structured, multi-module transformation program for business owners ready to move from working in the business to working on it. Six modules. Monthly sessions. A working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
   },
   {
     q: "Who is this program for?",
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "How is this different from hiring a business coach or a consulting firm?",
-    a: "A coach works on you. A consulting firm does the work for you for a quarter and hands it back. The Architecture program does neither. It's a structured, week-by-week practice you build into the business, with a consultant walking the discipline alongside you through the program. The goal is a business that runs on structure, not on presence.",
+    a: "A coach works on you. A consulting firm does the work for you for a quarter and hands it back. The Architecture program does neither. It's a structured, month-by-month practice you build into the business, with a consultant walking the discipline alongside you through the program. The goal is a business that runs on structure, not on presence.",
   },
   {
     q: "How much does the program cost?",
@@ -207,8 +207,8 @@ export default function Home() {
             </h2>
             <p className="text-xl">
               The Architecture is the signature program where the two frameworks
-              meet your business. Weekly sessions. A working system.
-              Bound companion books. Structured, disciplined work — week by week,
+              meet your business. Monthly sessions. A working system.
+              Bound companion books. Structured, disciplined work — month by month,
               module by module.
             </p>
           </div>
@@ -252,9 +252,9 @@ export default function Home() {
                 body: "FAMILY names the six domains we build. DESIGN names the six steps we use. The content and the discipline, held together, across every phase of the program.",
               },
               {
-                stat: "Weekly",
+                stat: "Monthly",
                 label: "A program, not a sprint",
-                body: "A committed cadence of weekly sessions, structured work, and bound companion books. Built for transformation that holds, not a quick fix that fades.",
+                body: "A committed cadence of monthly sessions, structured work, and bound companion books. Built for transformation that holds, not a quick fix that fades.",
               },
             ].map(({ stat, label, body }) => (
               <div key={label} className="p-8 border border-border rounded-2xl bg-surface">
@@ -322,7 +322,7 @@ export default function Home() {
               {
                 icon: Sparkles,
                 title: "The Architecture",
-                body: "The structured flagship transformation program. Weekly sessions, bound companions, a 21-tab working system.",
+                body: "The structured flagship transformation program. Monthly sessions, bound companions, a 21-tab working system.",
                 href: "/architecture",
                 primary: true,
               },
@@ -373,7 +373,7 @@ export default function Home() {
       <section className="py-24 bg-surface border-y border-border">
         <div className="container-site max-w-3xl">
           <p className="eyebrow mb-4">Frequently asked</p>
-          <h2 className="font-serif mb-10">Questions I get every week.</h2>
+          <h2 className="font-serif mb-10">Questions I get often.</h2>
           <div className="divide-y divide-border">
             {faqs.map(({ q, a }) => (
               <details key={q} className="group py-5">

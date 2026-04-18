@@ -14,7 +14,7 @@ const practiceAreas = [
     title: "Consulting & Coaching",
     body: "Long-form transformation engagements for owners and leadership teams. Deep structural work on operating rhythm, strategic priorities, decision-rights, and the owner's own leadership practice. The Architecture program lives here, along with shorter scoped engagements where the fit is right.",
     highlights: [
-      "Weekly sessions with structured between-session work",
+      "Monthly sessions with structured between-session work",
       "Scoreboards and cadences installed",
       "Leadership practices built, not just discussed",
     ],
@@ -47,7 +47,7 @@ const practiceAreas = [
     title: "Financial Analysis",
     body: "Diagnostic and strategic financial work supporting major decisions. KPIs owners should know cold. Unit economics. Financial baselines and targets. The numbers you need to see to make the strategic moves with confidence instead of hope.",
     highlights: [
-      "Financial baseline and Weekly Revenue Target",
+      "Financial baseline and Monthly Revenue Target",
       "KPI scoreboard across growth, profit, and cash",
       "Analysis to support pricing, hiring, and expansion decisions",
     ],
@@ -90,7 +90,7 @@ export default function HowIHelp() {
                 <p className="text-lg text-ink-soft">
                   A complete transformation system: the master framework, a working
                   system, bound companion books, and a consultant walking the program
-                  with you week by week through every phase.
+                  with you month by month through every phase.
                 </p>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function HowIHelp() {
                 <p className="eyebrow mb-3">Structure</p>
                 <ul className="space-y-2 text-ink-soft">
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Six modules across the full arc of the program</span></li>
-                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Weekly 60-minute consulting sessions</span></li>
+                  <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Monthly 60-minute sessions</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Structured between-session work</span></li>
                   <li className="flex gap-3"><Check size={18} className="text-coral shrink-0 mt-1" /><span>Bound companion books for both sides</span></li>
                 </ul>
