@@ -70,10 +70,10 @@ export default function Home() {
               You&apos;re in the business. That&apos;s why you can&apos;t see the <span className="underline-wavy">dots</span>.
             </h1>
             <p className="text-xl max-w-xl mb-6">
-              I help business owners — family enterprises, founders, and
-              established mid-market companies — do the long structural work of
-              moving from working <em>in</em> the business to working <em>on</em> it.
-              A structured program. Two frameworks. One transformation.
+              I help business owners make the hardest shift there is — from
+              working <em>in</em> the business to working <em>on</em> it. What
+              changes: who you become as a leader, and what the business is
+              capable of without you in it every day.
             </p>
             <p className="text-lg text-ink-soft mb-8">
               <strong>FAMILY is what we build.</strong> The <Link href="/design-method" className="link-arrow inline-flex">DESIGN Method</Link> is how we build it.
