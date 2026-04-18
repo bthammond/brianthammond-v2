@@ -73,6 +73,12 @@ export default function Footer() {
             <p>&copy; {new Date().getFullYear()} Brian T. Hammond. All rights reserved.</p>
             <p>MBA, LSU &middot; 30+ years advising family businesses and entrepreneurs.</p>
           </div>
+          <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-white/50">
+            <Link href="/privacy" className="hover:text-gold transition">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-gold transition">Terms of Use</Link>
+            <Link href="/disclaimer" className="hover:text-gold transition">Disclaimer</Link>
+            <Link href="/sitemap.xml" className="hover:text-gold transition">Sitemap</Link>
+          </div>
         </div>
       </div>
     </footer>
