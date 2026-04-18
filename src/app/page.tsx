@@ -24,7 +24,7 @@ const designSteps = [
 const faqs = [
   {
     q: "What is the FAMILY Framework Architecture?",
-    a: "A structured, multi-module transformation program for business owners ready to move from working in the business to working on it. Six modules. Weekly consulting sessions. A working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
+    a: "A structured, multi-module transformation program for business owners ready to move from working in the business to working on it. Six modules. Weekly sessions. A working system. Bound Client and Advisor Companion books. Built around the FAMILY Framework and powered by the DESIGN Method.",
   },
   {
     q: "Who is this program for?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "How much does the program cost?",
-    a: "The Architecture is a multi-year commitment, and pricing is scoped in the discovery conversation — every engagement is sized to the business, the team, and the specific work ahead. The 15-question Readiness Assessment tells you in fifteen minutes whether the program fits where you are today, before any conversation about investment.",
+    a: "Pricing starts at $1,964 per month, and total program investment is scoped in the discovery conversation — every engagement is sized to the business, the team, and the specific work ahead. The 15-question Readiness Assessment tells you in fifteen minutes whether the program fits where you are today, before any conversation about investment.",
   },
   {
     q: "What is the DESIGN Method?",
@@ -206,7 +206,7 @@ export default function Home() {
             </h2>
             <p className="text-xl">
               The Architecture is the signature program where the two frameworks
-              meet your business. Weekly consulting sessions. A working system.
+              meet your business. Weekly sessions. A working system.
               Bound companion books. Structured, disciplined work — week by week,
               module by module.
             </p>

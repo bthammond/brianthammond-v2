@@ -174,7 +174,7 @@ export default function FamilyFramework() {
                 The exercises, diagnostics, and specific tools inside each domain are
                 proprietary and reserved for client engagements — delivered through
                 the Architecture program with a bound Client Workbook, a
-                21-tab Excel working system, and weekly consulting sessions. What you
+                21-tab Excel working system, and weekly sessions. What you
                 see on this page is the shape, not the playbook.
               </p>
             </div>

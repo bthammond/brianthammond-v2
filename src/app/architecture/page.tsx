@@ -76,7 +76,7 @@ const deliverables = [
   },
   {
     icon: MessagesSquare,
-    title: "Weekly Consulting Sessions",
+    title: "Weekly Sessions",
     sub: "The Heartbeat",
     body:
       "60-minute sessions every week, extended at the close of each module. Structured between-session work keeps the program moving.",
@@ -256,7 +256,7 @@ export default function ArchitecturePage() {
               </div>
               <div>
                 <p className="text-lg">
-                  A committed program with weekly consulting, bound companion
+                  A committed program with weekly sessions, bound companion
                   books, and the working system. Total program investment is
                   scoped in the discovery conversation based on business size
                   and complexity. The{" "}
