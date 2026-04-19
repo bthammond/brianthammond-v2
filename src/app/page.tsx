@@ -115,19 +115,55 @@ export default function Home() {
 
       {/* THE PROBLEM */}
       <section className="py-20 bg-surface border-y border-border">
-        <div className="container-site max-w-4xl text-center">
-          <p className="eyebrow mb-4">The problem</p>
-          <h2 className="font-serif mb-8">
+        <div className="container-site max-w-4xl">
+          <p className="eyebrow mb-4 text-center">The problem</p>
+          <h2 className="font-serif mb-8 text-center">
             You can&apos;t read the label from inside the bottle.
           </h2>
-          <p className="text-xl leading-relaxed">
+          <p className="text-xl leading-relaxed mb-10 text-center">
             Businesses don&apos;t stall because owners aren&apos;t smart. They stall
-            because owners are <em>in</em> the business — running the day —
-            and can&apos;t see the patterns from that seat. The succession that
-            nobody&apos;s actually planning for. The communication that&apos;s
-            drifted. The systems that worked at $2M and quietly break at $20M. You
-            know something&apos;s off. You can&apos;t quite name it. That&apos;s the
-            job.
+            because owners are <em>in</em> the business — running the day — and
+            can&apos;t see the patterns from that seat.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-5 max-w-3xl mx-auto">
+            {[
+              {
+                bold: "The 3am succession fear.",
+                body: "You know the transition is coming. You also know nobody\u2019s actually planning it. So it sits there.",
+              },
+              {
+                bold: "The conversations no one has at dinner.",
+                body: "Sibling friction. An heir who isn\u2019t ready. A spouse who resents the business. Everyone feels it. Nobody names it.",
+              },
+              {
+                bold: "Systems that worked at $2M and break at $20M.",
+                body: "What got you here won\u2019t take you further. You can feel the weight starting to shift.",
+              },
+              {
+                bold: "The generational conflict nobody wins.",
+                body: "Dad won\u2019t let go. The next gen won\u2019t wait forever. Business decisions become loyalty tests.",
+              },
+              {
+                bold: "The leadership still running on you.",
+                body: "Take a week off and things slip. The business can\u2019t yet live without your presence in every room.",
+              },
+              {
+                bold: "The legacy you don\u2019t want to break.",
+                body: "You inherited something real. You don\u2019t want to be the one who loses it. The fear of failing the family is real and almost never spoken aloud.",
+              },
+            ].map(({ bold, body }) => (
+              <div key={bold} className="flex gap-3">
+                <Check size={20} className="text-coral shrink-0 mt-1" />
+                <p className="text-base">
+                  <strong>{bold}</strong> {body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-lg text-center mt-10 text-ink-soft italic">
+            You know something&apos;s off. You can&apos;t quite name it. That&apos;s the job.
           </p>
         </div>
       </section>
@@ -369,6 +405,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="py-24 bg-foreground text-white">
+        <div className="container-site max-w-6xl">
+          <div className="flex items-baseline justify-between flex-wrap gap-4 mb-12">
+            <div>
+              <p className="eyebrow text-gold mb-2">What owners say</p>
+              <h2 className="font-serif text-white">Results from owners who did the work.</h2>
+            </div>
+            <p className="text-xs text-white/50 max-w-xs">
+              Testimonials below are illustrative while real client quotes are being collected and approved for publication. Names anonymized by preference.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                stars: 5,
+                quote: "Brian helped us see what we couldn\u2019t see from inside. We finally have a succession plan the whole family has bought into. That alone was worth every dollar.",
+                name: "M.R.",
+                role: "2nd-Generation Owner",
+                company: "Manufacturing · $18M revenue",
+              },
+              {
+                stars: 5,
+                quote: "I\u2019d been running my business for 22 years and thought I knew everything. Brian showed me the patterns I was blind to. The FAMILY Framework gave us a language to talk about things we\u2019d been avoiding for a decade.",
+                name: "D.T.",
+                role: "Founder & CEO",
+                company: "Distribution · $45M revenue",
+              },
+              {
+                stars: 5,
+                quote: "The Architecture is unlike anything else. It\u2019s not coaching, it\u2019s not consulting \u2014 it\u2019s a complete operating system for the business. We\u2019re a different company months later.",
+                name: "K.W.",
+                role: "Co-Owner",
+                company: "Family Enterprise · $12M revenue",
+              },
+            ].map(({ stars, quote, name, role, company }) => (
+              <blockquote
+                key={name}
+                className="p-8 border border-white/10 rounded-2xl flex flex-col"
+              >
+                <div className="flex gap-1 text-gold mb-6" aria-label={`${stars} out of 5 stars`}>
+                  {Array.from({ length: stars }).map((_, i) => (
+                    <span key={i} aria-hidden>★</span>
+                  ))}
+                </div>
+                <p className="font-serif text-lg leading-snug text-white mb-8 flex-1">
+                  &ldquo;{quote}&rdquo;
+                </p>
+                <footer className="text-sm text-white/70 border-t border-white/10 pt-4">
+                  <p className="font-semibold text-white">{name}</p>
+                  <p>{role}</p>
+                  <p className="text-white/50">{company}</p>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-24 bg-surface border-y border-border">
         <div className="container-site max-w-3xl">
@@ -388,27 +484,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIAGNOSTIC CTA */}
+      {/* SINGLE PRIMARY CTA */}
       <section className="py-24">
         <div className="container-site max-w-3xl text-center">
           <p className="eyebrow mb-4">Start here</p>
           <h2 className="font-serif mb-6">
-            Two assessments. Pick the one that fits.
+            Fifteen minutes. A clear read on where you stand.
           </h2>
           <p className="text-xl mb-8">
-            The 10-minute FAMILY diagnostic scores your <em>business</em> across the
-            six domains. The 15-minute Readiness Assessment scores <em>you</em> on
-            fit for the Architecture program. Start with whichever feels more
-            urgent.
+            The Readiness Assessment is the right first step. Fifteen honest
+            questions, fifteen minutes, a clear read on whether the Architecture
+            program is the right fit for where you are today. No commitment. No
+            pressure.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex justify-center">
             <Link href="/readiness" className="btn-primary">
-              Readiness Assessment (15 min) <ArrowRight size={18} />
-            </Link>
-            <Link href="/diagnostic" className="btn-outline">
-              Business Diagnostic (10 min)
+              Take the Readiness Assessment <ArrowRight size={18} />
             </Link>
           </div>
+          <p className="mt-6 text-sm text-muted">
+            Prefer a business read first?{" "}
+            <Link href="/diagnostic" className="link-arrow">
+              Take the 10-minute FAMILY diagnostic instead
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

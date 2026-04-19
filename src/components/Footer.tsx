@@ -44,8 +44,10 @@ export default function Footer() {
               <li><Link href="/who-i-help" className="hover:text-gold transition">Who I help</Link></li>
               <li><Link href="/readiness" className="hover:text-gold transition">Readiness Assessment</Link></li>
               <li><Link href="/diagnostic" className="hover:text-gold transition">Business Diagnostic</Link></li>
+              <li><Link href="/resources" className="hover:text-gold transition">Resources</Link></li>
               <li><Link href="/about" className="hover:text-gold transition">About</Link></li>
               <li><Link href="/insights" className="hover:text-gold transition">Insights</Link></li>
+              <li><Link href="/ble-training" className="hover:text-gold transition">About BLE Training</Link></li>
               <li><Link href="/contact" className="hover:text-gold transition">Contact</Link></li>
             </ul>
           </div>
