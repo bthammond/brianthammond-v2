@@ -1,24 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  /* Editorial consulting palette: cool cream + deep ink + blue accent.
-     The tokens are still named "coral" / "cream" so existing class
-     references (text-coral, bg-cream, etc.) keep working. */
-  --background: #f0f3f8;
-  --surface: #ffffff;
-  --foreground: #0f1d2e;
-  --ink-soft: #324056;
-  --muted: #6b7684;
-  --border: #dde4ec;
+  /* New palette: warm, premium, non-corporate.
+     Tokens still named "coral" so existing class references keep working. */
+  --background: #FAF7F1;
+  --surface: #FFFFFF;
+  --foreground: #14110D;
+  --ink-soft: #2E2820;
+  --muted: #6E6557;
+  --border: #E4DDCD;
 
-  --coral: #14396e;       /* primary accent — deep navy */
-  --coral-deep: #0a2440;  /* hover/deepest */
-  --gold: #c9a961;        /* secondary accent — muted gold */
-  --gold-deep: #a68a42;
-  --teal: #2a6f6f;
-  --teal-deep: #1f5555;
-  --cream: #f0f3f8;
-  --cream-deep: #e3e9f1;
+  --coral: #1F5F5B;        /* primary accent — deep teal */
+  --coral-deep: #14403D;   /* hover/deepest */
+  --gold: #C97B3F;         /* secondary accent — warm amber for small highlights */
+  --gold-deep: #A45F2C;
+  --teal: #1F5F5B;
+  --teal-deep: #14403D;
+  --cream: #FAF7F1;
+  --cream-deep: #F0E9DA;
 }
 
 @theme inline {
@@ -57,64 +56,71 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
-@layer base {
-  h1, h2, h3, h4 {
-    font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
-    color: var(--foreground);
-    letter-spacing: -0.02em;
-    font-weight: 600;
-    line-height: 1.1;
-  }
-
-  h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-  h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
-  h3 { font-size: clamp(1.35rem, 2vw, 1.6rem); line-height: 1.25; }
-
-  p { color: var(--ink-soft); }
-
-  a { color: inherit; }
+h1, h2, h3, h4 {
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.05;
 }
 
+h1 { font-size: clamp(2.75rem, 6vw, 5.5rem); }
+h2 { font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.1; }
+h3 { font-size: clamp(1.4rem, 2vw, 1.75rem); line-height: 1.2; }
+
+p { color: var(--ink-soft); }
+
+a { color: inherit; }
+
+/* PRIMARY BUTTON — solid teal, white text */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.6rem;
+  padding: 1rem 1.75rem;
   background: var(--coral);
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 600;
   font-size: 0.95rem;
-  border-radius: 9999px;
-  transition: background-color 200ms, transform 200ms;
+  letter-spacing: 0.01em;
+  border-radius: 0.5rem;
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+  border: 1px solid var(--coral);
 }
 .btn-primary:hover {
   background: var(--coral-deep);
+  border-color: var(--coral-deep);
   transform: translateY(-1px);
+  box-shadow: 0 12px 32px -10px rgba(31, 95, 91, 0.45);
 }
 
+/* SECONDARY BUTTON — outlined ink */
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.6rem;
-  border: 2px solid var(--foreground);
+  padding: 1rem 1.75rem;
   background: transparent;
   color: var(--foreground);
   font-weight: 600;
   font-size: 0.95rem;
-  border-radius: 9999px;
-  transition: background-color 200ms, color 200ms;
+  letter-spacing: 0.01em;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--foreground);
+  transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
 }
 .btn-outline:hover {
   background: var(--foreground);
-  color: #ffffff;
+  color: #FFFFFF;
+  transform: translateY(-1px);
 }
 
+/* TEXT LINK with arrow */
 .link-arrow {
   display: inline-flex;
   align-items: center;
@@ -129,14 +135,16 @@ body {
   gap: 0.6rem;
 }
 
+/* EYEBROW — small label */
 .eyebrow {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold-deep);
+  color: var(--coral);
 }
 
+/* CONTAINER */
 .container-site {
   max-width: 1200px;
   margin-left: auto;
@@ -145,11 +153,43 @@ body {
   padding-right: 1.5rem;
 }
 
+/* WAVY UNDERLINE — used sparingly in display copy */
 .underline-wavy {
-  background-image: linear-gradient(var(--gold), var(--gold));
+  background-image: linear-gradient(var(--coral), var(--coral));
   background-size: 100% 8px;
   background-repeat: no-repeat;
   background-position: 0 95%;
   padding: 0 0.1em;
 }
 
+/* SCROLL REVEAL */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SUBTLE HOVER LIFT on cards */
+.hover-lift {
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(20, 17, 13, 0.18);
+}
+
+/* MARQUEE for credentials bar */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 40s linear infinite;
+  white-space: nowrap;
+}

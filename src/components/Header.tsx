@@ -5,32 +5,36 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const nav = [
-  { href: "/architecture", label: "The Architecture" },
-  { href: "/how-i-help", label: "How I help" },
-  { href: "/who-i-help", label: "Who I help" },
-  { href: "/readiness", label: "Readiness" },
   { href: "/about", label: "About" },
+  { href: "/architecture", label: "Work" },
   { href: "/insights", label: "Insights" },
+  { href: "/contact", label: "Connect" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-background/90 backdrop-blur-sm border-b border-border">
-      <div className="container-site flex items-center justify-between h-20">
-        <Link href="/" className="font-serif text-2xl font-semibold tracking-tight">
-          Brian T. Hammond
+    <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-md border-b border-border/50">
+      <div className="container-site flex items-center justify-between h-[88px]">
+        <Link href="/" className="flex flex-col leading-none group">
+          <span className="font-serif text-2xl font-semibold tracking-tight">
+            Brian T. Hammond
+          </span>
+          <span className="text-[10px] uppercase tracking-[0.18em] text-muted mt-1">
+            Family Business Advisor · Chief Learning Officer
+          </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-ink-soft hover:text-coral transition-colors"
+              className="text-sm font-medium text-foreground hover:text-coral transition-colors relative group"
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-coral transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
           <Link href="/contact" className="btn-primary !py-2.5 !px-5 text-sm">
